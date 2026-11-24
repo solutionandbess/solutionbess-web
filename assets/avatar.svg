@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Solution &amp; BESS">
+<rect width="256" height="256" rx="56" fill="#0A2C4A"/>
+<g transform="translate(26,58) scale(1.07)">
+<defs><style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&amp;display=swap');</style>
+<linearGradient id="borde-av-oscuro" x1="0" y1="0" x2="190" y2="0" gradientUnits="userSpaceOnUse">
+<stop offset="0.5" stop-color="#FFFFFF"/><stop offset="0.5" stop-color="#3A9BAA"/></linearGradient></defs>
+<rect x="8" y="28" width="162" height="84" rx="16" fill="none" stroke="url(#borde-av-oscuro)" stroke-width="9"/>
+<rect x="174" y="52" width="11" height="36" rx="4" fill="#3A9BAA"/>
+<text x="40" y="93" text-anchor="middle" font-family="Montserrat, 'Segoe UI', Arial, sans-serif" font-weight="800" font-size="64" fill="#FFFFFF">S</text>
+<text x="139" y="93" text-anchor="middle" font-family="Montserrat, 'Segoe UI', Arial, sans-serif" font-weight="800" font-size="64" fill="#3A9BAA">B</text>
+<path d="M103 2 L67 78 L88 78 L73 138 L113 56 L91 56 Z" fill="#D39B22" stroke="#07121B" stroke-width="8" stroke-linejoin="round" paint-order="stroke"/>
+</g></svg>

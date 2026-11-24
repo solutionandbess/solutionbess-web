@@ -46,7 +46,7 @@
       estado.textContent = "Gracias. Recibimos tu solicitud y te escribiremos a tu correo con el alcance y el valor del diagnóstico.";
     } catch (e) {
       estado.className = "estado error";
-      estado.textContent = "No pudimos enviar la solicitud. Escríbenos a solutionandbess@gmail.com.";
+      estado.textContent = "No pudimos enviar la solicitud. Escríbenos a contacto@solutionandbess.com.";
     } finally {
       boton.disabled = false;
     }

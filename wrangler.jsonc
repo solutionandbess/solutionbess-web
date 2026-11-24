@@ -1,0 +1,16 @@
+// Configuración para servir la web desde Cloudflare (Workers con archivos estáticos).
+// Sin código de servidor: Cloudflare entrega los archivos de esta carpeta y aplica _headers.
+// Archivos que no se publican: ver .assetsignore.
+{
+  "name": "solutionandbess-web",
+  "compatibility_date": "2026-11-24",
+  "assets": {
+    "directory": "./",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  },
+  // Dirección de prueba *.workers.dev: encendida para probar antes del cambio de dominio.
+  // Después del cambio se apaga para no tener una copia duplicada de la web.
+  "workers_dev": true,
+  "preview_urls": false
+}

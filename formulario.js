@@ -13,7 +13,13 @@
   form.addEventListener("submit", async (ev) => {
     ev.preventDefault();
     const d = new FormData(form);
-    if (limpio(d.get("sitio_web"))) return;            // trampa para robots: un humano no ve este campo
+    // Trampa para robots: un humano no ve este campo. Si llega con algo, no se guarda, pero se muestra
+    // un mensaje con el correo por si fue un autocompletado del navegador y no un robot.
+    if (limpio(d.get("zx_control"))) {
+      estado.className = "estado ok";
+      estado.textContent = "Gracias. Si no te escribimos en un día hábil, escríbenos a contacto@solutionandbess.com.";
+      return;
+    }
     if (!form.checkValidity()) {
       form.reportValidity();
       return;

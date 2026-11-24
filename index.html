@@ -201,7 +201,7 @@
   <div>
    <h2>Solicita tu diagnóstico</h2>
    <p>Déjanos tus datos y cuándo vence tu contrato. Te escribimos con el alcance y el valor para agendar.</p>
-   <p class="alt">¿Prefieres el correo? Escríbenos a <a href="mailto:contacto@solutionandbess.com?subject=Diagn%C3%B3stico%20de%20renovaci%C3%B3n">contacto@solutionandbess.com</a>.</p>
+   <p class="alt">¿Prefieres el correo? Escríbenos a <!--email_off--><a href="mailto:contacto@solutionandbess.com?subject=Diagn%C3%B3stico%20de%20renovaci%C3%B3n">contacto@solutionandbess.com</a><!--/email_off-->.</p>
   </div>
   <form class="formulario" id="formulario" novalidate>
    <div class="campos">
@@ -211,15 +211,16 @@
     <label><span class="et">Correo</span><input name="correo" type="email" required maxlength="200" autocomplete="email"></label>
     <label><span class="et">Teléfono <i>(opcional)</i></span><input name="telefono" type="tel" maxlength="40" autocomplete="tel"></label>
     <label><span class="et">¿Cuándo vence tu contrato?</span>
-     <select name="vencimiento">
-      <option value="2027">2027</option>
+     <select name="vencimiento" required>
+      <option value="" disabled selected>Elige una opción</option>
       <option value="2026">2026</option>
+      <option value="2027">2027</option>
       <option value="2028 o después">2028 o después</option>
       <option value="No lo sé">No lo sé</option>
      </select>
     </label>
     <label class="ancho2"><span class="et">Mensaje <i>(opcional)</i></span><textarea name="mensaje" rows="3" maxlength="2000"></textarea></label>
-    <label class="trampa" aria-hidden="true"><span class="et">No completar</span><input name="sitio_web" tabindex="-1" autocomplete="off"></label>
+    <div class="trampa" aria-hidden="true"><label for="zx_control">Deja este campo vacío</label><input id="zx_control" name="zx_control" type="text" tabindex="-1" autocomplete="off" data-1p-ignore data-lpignore="true" data-form-type="other"></div>
    </div>
    <label class="acepto"><input type="checkbox" name="acepta_privacidad" required><span>Acepto que usen estos datos para responder mi solicitud, según la <a href="privacidad.html">política de privacidad</a>.</span></label>
    <button class="boton claro ancho-total" type="submit">Enviar solicitud <span aria-hidden="true">→</span></button>
@@ -245,7 +246,7 @@
 </svg><!--/iso--></span>
    <span class="ln">SOLUTION <i>&amp;</i> <b>BESS</b></span>
   </div>
-  <p>Ingeniería en energía y almacenamiento · Chile · contacto@solutionandbess.com</p>
+  <p>Ingeniería en energía y almacenamiento · Chile · <!--email_off-->contacto@solutionandbess.com<!--/email_off--></p>
   <a href="privacidad.html">Política de privacidad</a>
  </div>
 </footer>

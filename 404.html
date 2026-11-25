@@ -1,73 +1,105 @@
 <!doctype html>
-<html lang="es-CL">
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Página no encontrada · Solution &amp; BESS</title>
+<title>Página no encontrada | Solution &amp; BESS</title>
 <meta name="robots" content="noindex">
-<link rel="icon" href="/assets/avatar.svg" type="image/svg+xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Sans:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap">
+<meta name="theme-color" content="#0A2C4A">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/icono-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/icono-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&family=Montserrat:wght@800&display=swap">
 <link rel="stylesheet" href="/estilos.css">
-<style>
-.nf { max-width: 720px; padding-top: 88px; padding-bottom: 120px; }
-.nf h1 { font-size: clamp(32px, 4vw, 46px); }
-.nf p { color: #30424F; }
-.nf .acciones { margin-top: 28px; display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
-</style>
+<script src="/js/base.js" defer></script>
 </head>
-<body>
-<header class="barra">
- <div class="ancho fila">
+<body class="pagina-corta">
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="barra solida estatica" id="barra">
+ <div class="barra-fila">
   <a class="marca" href="/" aria-label="Solution &amp; BESS, inicio">
-   <span class="iso"><!--iso-claro--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 140" aria-hidden="true" aria-label="Solution &amp; BESS">
-<defs><style>
-.nf { max-width: 720px; padding-top: 88px; padding-bottom: 120px; }
-.nf h1 { font-size: clamp(32px, 4vw, 46px); }
-.nf p { color: #30424F; }
-.nf .acciones { margin-top: 28px; display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
-</style>
-<linearGradient id="borde-sb-claro" x1="0" y1="0" x2="190" y2="0" gradientUnits="userSpaceOnUse">
-<stop offset="0.5" stop-color="#0A2C4A"/><stop offset="0.5" stop-color="#166372"/></linearGradient></defs>
+   <span class="iso iso-claro"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 140" aria-hidden="true" focusable="false">
+<defs><linearGradient id="borde-sb-claro" x1="0" y1="0" x2="190" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0.5" stop-color="#0A2C4A"/><stop offset="0.5" stop-color="#166372"/></linearGradient></defs>
 <rect x="8" y="28" width="162" height="84" rx="16" fill="none" stroke="url(#borde-sb-claro)" stroke-width="9"/>
 <rect x="174" y="52" width="11" height="36" rx="4" fill="#166372"/>
 <text x="40" y="93" text-anchor="middle" font-family="Montserrat, 'Segoe UI', Arial, sans-serif" font-weight="800" font-size="64" fill="#0A2C4A">S</text>
 <text x="139" y="93" text-anchor="middle" font-family="Montserrat, 'Segoe UI', Arial, sans-serif" font-weight="800" font-size="64" fill="#166372">B</text>
 <path d="M103 2 L67 78 L88 78 L73 138 L113 56 L91 56 Z" fill="#D39B22" stroke="#FFFFFF" stroke-width="8" stroke-linejoin="round" paint-order="stroke"/>
-</svg><!--/iso--></span>
+</svg></span>
    <span class="ln">SOLUTION <i>&amp;</i> <b>BESS</b></span>
   </a>
-  <a class="boton chico" href="/#contacto">Solicita tu diagnóstico</a>
+
+  <nav class="menu" aria-label="Sitio">
+   <a href="/#proyectos">Proyectos</a>
+   <a href="/#metodo">Método</a>
+   <a href="/#tecnologia">Tecnología</a>
+   <a href="/#latinoamerica">Latinoamérica</a>
+   <a href="/#preguntas">Preguntas</a>
+  </nav>
+
+  <a class="boton chico barra-boton" href="/#contacto">Cuéntanos tu proyecto</a>
+
+  <details class="menu-movil">
+   <summary><span class="rayas" aria-hidden="true"></span>Menú</summary>
+   <nav class="menu-movil-panel" aria-label="Sitio, menú de celular">
+    <a href="/">Inicio</a>
+    <a href="/#proyectos">Proyectos</a>
+    <a href="/#metodo">Método</a>
+    <a href="/#latinoamerica">Latinoamérica</a>
+    <a href="/diagnostico-renovacion">Diagnóstico de renovación (Chile)</a>
+    <a class="boton" href="/#contacto">Cuéntanos tu proyecto <span class="fl" aria-hidden="true">→</span></a>
+   </nav>
+  </details>
  </div>
 </header>
 
-<main class="ancho nf">
- <p class="ceja">Error 404</p>
- <h1>No encontramos esta página</h1>
- <p>Puede que el enlace esté mal escrito o que la página ya no exista. Desde el inicio puedes ver cómo funciona el diagnóstico de renovación de tu contrato eléctrico.</p>
- <div class="acciones">
-  <a class="boton" href="/">Ir al inicio <span aria-hidden="true">→</span></a>
-  <a class="enlace" href="/#contacto">Solicita tu diagnóstico</a>
+<main id="contenido" class="interior">
+ <div class="reticula">
+  <div class="legal">
+   <p class="etiqueta">Error 404</p>
+   <h1 class="tit">No encontramos esta página</h1>
+   <p class="entrada">Puede que el enlace esté mal escrito o que la página ya no exista. Desde el inicio puedes ver qué proyectos de ingeniería hacemos y contarnos el tuyo.</p>
+   <div class="acciones acciones-404">
+    <a class="boton" href="/">Ir al inicio <span class="fl" aria-hidden="true">→</span></a>
+    <a class="enlace" href="/#contacto">Cuéntanos tu proyecto</a>
+    <a class="enlace" href="/diagnostico-renovacion">Diagnóstico de renovación (Chile)</a>
+   </div>
+  </div>
  </div>
 </main>
 
 <footer class="pie">
- <div class="ancho fila">
-  <div class="marca">
-   <span class="iso"><!--iso-oscuro--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 140" aria-hidden="true" aria-label="Solution &amp; BESS">
-<defs><style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&amp;display=swap');</style>
-<linearGradient id="borde-sb-oscuro" x1="0" y1="0" x2="190" y2="0" gradientUnits="userSpaceOnUse">
-<stop offset="0.5" stop-color="#FFFFFF"/><stop offset="0.5" stop-color="#3A9BAA"/></linearGradient></defs>
-<rect x="8" y="28" width="162" height="84" rx="16" fill="none" stroke="url(#borde-sb-oscuro)" stroke-width="9"/>
+ <div class="reticula">
+  <div class="pie-marca">
+   <span class="iso"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 140" aria-hidden="true" focusable="false">
+<defs><linearGradient id="borde-sb-pie" x1="0" y1="0" x2="190" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0.5" stop-color="#FFFFFF"/><stop offset="0.5" stop-color="#3A9BAA"/></linearGradient></defs>
+<rect x="8" y="28" width="162" height="84" rx="16" fill="none" stroke="url(#borde-sb-pie)" stroke-width="9"/>
 <rect x="174" y="52" width="11" height="36" rx="4" fill="#3A9BAA"/>
 <text x="40" y="93" text-anchor="middle" font-family="Montserrat, 'Segoe UI', Arial, sans-serif" font-weight="800" font-size="64" fill="#FFFFFF">S</text>
 <text x="139" y="93" text-anchor="middle" font-family="Montserrat, 'Segoe UI', Arial, sans-serif" font-weight="800" font-size="64" fill="#3A9BAA">B</text>
 <path d="M103 2 L67 78 L88 78 L73 138 L113 56 L91 56 Z" fill="#D39B22" stroke="#07121B" stroke-width="8" stroke-linejoin="round" paint-order="stroke"/>
-</svg><!--/iso--></span>
-   <span class="ln">SOLUTION <i>&amp;</i> <b>BESS</b></span>
+</svg></span>
+   <p class="ln">SOLUTION <i>&amp;</i> <b>BESS</b></p>
+   <p>Ingeniería en energía y almacenamiento. Empresa en formación, con base en Chile.</p>
   </div>
-  <p>Ingeniería en energía y almacenamiento · Chile</p>
-  <a href="/">Inicio</a>
+  <nav class="pie-enlaces" aria-label="Enlaces del pie">
+   <a href="/">Inicio</a>
+   <a href="/#proyectos">Proyectos</a>
+   <a href="/#metodo">Método</a>
+   <a href="/diagnostico-renovacion">Diagnóstico de renovación (Chile)</a>
+   <a href="/privacidad">Política de privacidad</a>
+  </nav>
+  <div class="pie-contacto">
+   <p><!--email_off--><a href="mailto:contacto@solutionandbess.com">contacto@solutionandbess.com</a><!--/email_off--></p>
+   <p><a href="https://www.instagram.com/solutionandbess/" target="_blank" rel="noopener">Instagram @solutionandbess</a></p>
+  </div>
+  <p class="pie-nota">© 2026 Solution &amp; BESS.</p>
  </div>
 </footer>
+
 </body>
 </html>

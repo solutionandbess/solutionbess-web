@@ -1,256 +1,1273 @@
 <!doctype html>
-<html lang="es-CL">
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Solution &amp; BESS · Diagnóstico de renovación eléctrica</title>
-<meta name="description" content="Si el contrato eléctrico de tu empresa vence en 2027, revisamos contrato, facturas y potencia y te decimos qué conviene negociar: precio, potencia, baterías o solar.">
+<title>Ingeniería BESS y solar para Latinoamérica | Solution &amp; BESS</title>
+<meta name="description" content="Ingeniería para proyectos de baterías (BESS), parques solares y sistemas híbridos en Latinoamérica: dimensionamiento, estudios y especificaciones.">
 <link rel="canonical" href="https://solutionandbess.com/">
-<link rel="icon" href="assets/avatar.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0A2C4A">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Solution &amp; BESS">
+<meta property="og:locale" content="es_LA">
+<meta property="og:url" content="https://solutionandbess.com/">
+<meta property="og:title" content="Ingeniería para tu proyecto de baterías, solar o híbrido en Latinoamérica">
+<meta property="og:description" content="Trae la idea, el terreno o el problema de demanda. Lo convertimos en un proyecto dimensionado, especificado y listo para licitar, construir y conectar.">
+<meta property="og:image" content="https://solutionandbess.com/assets/compartir.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Solution &amp; BESS: ingeniería para proyectos de baterías, solar e híbridos en Latinoamérica.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/icono-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/icono-180.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="preload" as="image" type="image/avif" href="/assets/portada-movil.avif" media="(max-width: 899px)" fetchpriority="high">
+<link rel="preload" as="image" type="image/avif" href="/assets/portada-escritorio.avif" media="(min-width: 900px)" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Sans:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="estilos.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&family=Montserrat:wght@800&display=swap">
+<link rel="stylesheet" href="/estilos.css">
+<script src="/js/base.js" defer></script>
+<script src="/js/usos.js" defer></script>
+<script src="/js/predimensionar.js" defer></script>
+<script src="/js/latam.js" defer></script>
+<script src="/js/proyecto.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://solutionandbess.com/#organizacion",
+      "name": "Solution & BESS",
+      "url": "https://solutionandbess.com/",
+      "email": "contacto@solutionandbess.com",
+      "logo": "https://solutionandbess.com/assets/icono-512.png",
+      "image": "https://solutionandbess.com/assets/compartir.jpg",
+      "description": "Firma de ingeniería en energía y almacenamiento, con base en Chile, para proyectos de baterías (BESS), parques solares y sistemas híbridos en Latinoamérica.",
+      "areaServed": ["Argentina", "Bolivia", "Brasil", "Chile", "Colombia", "Costa Rica", "Ecuador", "El Salvador", "Guatemala", "Honduras", "México", "Nicaragua", "Panamá", "Paraguay", "Perú", "Puerto Rico", "República Dominicana", "Uruguay", "Venezuela"],
+      "knowsAbout": ["Sistemas de almacenamiento de energía con baterías (BESS)", "Plantas fotovoltaicas", "Sistemas híbridos y microrredes", "Estudios eléctricos y de conexión", "Especificación técnica de equipos"],
+      "sameAs": ["https://www.instagram.com/solutionandbess/"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://solutionandbess.com/#sitio",
+      "url": "https://solutionandbess.com/",
+      "name": "Solution & BESS",
+      "inLanguage": "es",
+      "publisher": { "@id": "https://solutionandbess.com/#organizacion" }
+    },
+    {
+      "@type": "Service",
+      "name": "Ingeniería para proyectos de baterías, solar e híbridos",
+      "serviceType": "Ingeniería en energía y almacenamiento",
+      "provider": { "@id": "https://solutionandbess.com/#organizacion" },
+      "areaServed": "Latinoamérica",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Tipos de proyecto",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Almacenamiento con baterías (BESS)" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Parques solares y plantas fotovoltaicas" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sistemas híbridos y microrredes" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Estudios eléctricos y de conexión" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Especificación y compra de equipos" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Evaluación técnico-económica" } }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://solutionandbess.com/#preguntas",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Quiénes están detrás de Solution & BESS?", "acceptedAnswer": { "@type": "Answer", "text": "Somos una firma nueva de ingeniería en energía y almacenamiento, con base en Chile. Por eso publicamos el método, ejemplos de entregables y los supuestos de cálculo: para que puedas evaluar cómo trabajamos antes de contratar. Estamos constituyendo la sociedad y publicaremos aquí su razón social." } },
+        { "@type": "Question", "name": "¿Cuánto cuesta la ingeniería?", "acceptedAnswer": { "@type": "Answer", "text": "Depende del alcance. Después de la conversación inicial recibes una propuesta por etapa, con precio, entregables y plazos. La conversación y la propuesta no te comprometen a contratar." } },
+        { "@type": "Question", "name": "¿Cuánto cuesta un sistema de baterías y cuánto voy a ahorrar?", "acceptedAnswer": { "@type": "Answer", "text": "No damos cifras sin ver los datos de tu proyecto. El costo depende de la potencia, las horas de almacenamiento, el fabricante, las obras de conexión, la logística y los impuestos de cada país. El beneficio depende de tu tarifa o tu contrato y de tu perfil de consumo. Eso es justamente lo que responde la prefactibilidad." } },
+        { "@type": "Question", "name": "¿Qué hacen con mis documentos?", "acceptedAnswer": { "@type": "Answer", "text": "Los usamos sólo para tu proyecto. No los entregamos a fabricantes, suministradores ni otros terceros sin tu autorización; sólo los alojan los proveedores de servicios que describe la política de privacidad. Si lo prefieres, firmamos un acuerdo de confidencialidad antes de recibirlos." } },
+        { "@type": "Question", "name": "¿En qué países trabajan?", "acceptedAnswer": { "@type": "Answer", "text": "Tenemos base en Chile y atendemos proyectos de toda Latinoamérica. Trabajamos en remoto y viajamos cuando el proyecto lo pide. En cada encargo empezamos por la norma técnica del país y los requisitos de su operador." } },
+        { "@type": "Question", "name": "¿Quién firma los estudios que exige mi país?", "acceptedAnswer": { "@type": "Answer", "text": "Depende del país y del trámite: algunos estudios deben llevar la firma de un profesional habilitado localmente. Lo revisamos en la primera conversación y la propuesta lo deja por escrito." } },
+        { "@type": "Question", "name": "¿Trabajan con una sola marca de baterías?", "acceptedAnswer": { "@type": "Answer", "text": "No. Trabajamos con equipos de varios fabricantes, entre ellos HiTHIUM, Jinko ESS, CORNEX, Kehua y SOFAR, y los elegimos según los requisitos de cada proyecto. Si tu proyecto exige otro fabricante o una licitación abierta, la especificación se escribe por requisitos y comparamos todas las ofertas con la misma matriz." } },
+        { "@type": "Question", "name": "¿Qué información necesito para que evalúen mi proyecto?", "acceptedAnswer": { "@type": "Answer", "text": "Para una empresa: consumos, facturas o recibos de los últimos 12 meses (mejor si hay perfil horario o cada 15 minutos), la tarifa o el contrato vigente, la potencia conectada y el objetivo del proyecto. Para un parque: ubicación, potencia prevista, punto de conexión y etapa de desarrollo. Si te falta algo, empezamos con lo que tengas." } },
+        { "@type": "Question", "name": "¿Qué estudios eléctricos se necesitan para conectar un proyecto?", "acceptedAnswer": { "@type": "Answer", "text": "Los habituales son flujo de carga, cortocircuito, coordinación de protecciones y, según el caso, estabilidad y calidad de energía. El nombre del trámite y el organismo cambian en cada país." } },
+        { "@type": "Question", "name": "¿Se pueden agregar baterías a un parque solar que ya opera?", "acceptedAnswer": { "@type": "Answer", "text": "Técnicamente sí. Depende de la regulación del país y de las condiciones de conexión del parque: puede exigir nuevos estudios y cambiar su régimen comercial. Conviene revisar el caso antes de invertir." } },
+        { "@type": "Question", "name": "¿Qué etapas de ingeniería tiene un proyecto?", "acceptedAnswer": { "@type": "Answer", "text": "Prefactibilidad y dimensionamiento; ingeniería conceptual y básica; estudios y conexión; especificación y compra; y detalle, obra y puesta en marcha. Puedes contratar una etapa o varias; cada una se cotiza por separado." } },
+        { "@type": "Question", "name": "¿Qué es un BESS?", "acceptedAnswer": { "@type": "Answer", "text": "Un BESS (sistema de almacenamiento de energía con baterías) guarda electricidad para entregarla después. Lo forman las celdas y sus módulos, el sistema que las gestiona (BMS), el conversor que une la corriente continua con la alterna (PCS), el sistema de gestión de energía (EMS), la transformación, las protecciones y la climatización." } },
+        { "@type": "Question", "name": "¿Qué diferencia hay entre la potencia (MW) y la energía (MWh) de una batería?", "acceptedAnswer": { "@type": "Answer", "text": "La potencia (MW) dice cuánto puede entregar en un instante. La energía (MWh) dice cuánto puede entregar en total: dividida por la potencia, da la duración. Un sistema de 10 MW y 40 MWh útiles entrega 10 MW durante 4 horas. La energía instalada es algo mayor que la útil. El tamaño se define a partir del uso y del perfil de carga, no del catálogo." } }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
-<header class="barra">
- <div class="ancho fila">
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<!-- Simbología eléctrica propia (IEC), reutilizada por los dibujos de la página -->
+<svg class="simbolos" width="0" height="0" aria-hidden="true" focusable="false">
+ <defs>
+  <g id="s-int"><path d="M0 0V8M-3.6 4.4l7.2 7.2M3.6 4.4l-7.2 7.2M0 34V26L-9.5 9.5"/></g>
+  <g id="s-sec"><path d="M0 0V8M-5 8H5M0 34V26L-9.5 9.5"/></g>
+  <g id="s-tr"><path d="M0 0V5M0 39V44"/><circle cx="0" cy="15" r="10"/><circle cx="0" cy="29" r="10"/></g>
+  <g id="s-inv"><rect class="relleno" x="-20" y="-20" width="40" height="40"/><path d="M-20 20L20 -20M-14 -12h10M4 11q2.5 -5 5 0t5 0"/><path d="M-14 -8h10" stroke-dasharray="2.5 1.25"/></g>
+  <g id="s-inv-ca"><rect class="relleno" x="-20" y="-20" width="40" height="40"/><path d="M-20 20L20 -20M4 8h10M-14 -11q2.5 -5 5 0t5 0"/><path d="M4 12h10" stroke-dasharray="2.5 1.25"/></g>
+  <g id="s-fv"><path d="M-25 -18V-23H35V13H30"/><rect class="relleno" x="-30" y="-18" width="60" height="36"/><path d="M-30 -18L-12 0L-30 18"/></g>
+  <g id="s-bat"><path d="M-9 -10H9M-9 5H9"/><path d="M-4.5 -5H4.5M-4.5 10H4.5" stroke-width="3.2"/><path d="M0 -5V5" stroke-dasharray="1.6 2.2"/></g>
+ </defs>
+</svg>
+
+<header class="barra" id="barra">
+ <div class="barra-fila">
   <a class="marca" href="#inicio" aria-label="Solution &amp; BESS, inicio">
-   <span class="iso"><!--iso-claro--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 140" aria-hidden="true" aria-label="Solution &amp; BESS">
-<defs><style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&amp;display=swap');</style>
-<linearGradient id="borde-sb-claro" x1="0" y1="0" x2="190" y2="0" gradientUnits="userSpaceOnUse">
-<stop offset="0.5" stop-color="#0A2C4A"/><stop offset="0.5" stop-color="#166372"/></linearGradient></defs>
+   <span class="iso iso-oscuro"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 140" aria-hidden="true" focusable="false">
+<defs><linearGradient id="borde-sb-oscuro" x1="0" y1="0" x2="190" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0.5" stop-color="#FFFFFF"/><stop offset="0.5" stop-color="#3A9BAA"/></linearGradient></defs>
+<rect x="8" y="28" width="162" height="84" rx="16" fill="none" stroke="url(#borde-sb-oscuro)" stroke-width="9"/>
+<rect x="174" y="52" width="11" height="36" rx="4" fill="#3A9BAA"/>
+<text x="40" y="93" text-anchor="middle" font-family="Montserrat, 'Segoe UI', Arial, sans-serif" font-weight="800" font-size="64" fill="#FFFFFF">S</text>
+<text x="139" y="93" text-anchor="middle" font-family="Montserrat, 'Segoe UI', Arial, sans-serif" font-weight="800" font-size="64" fill="#3A9BAA">B</text>
+<path d="M103 2 L67 78 L88 78 L73 138 L113 56 L91 56 Z" fill="#D39B22" stroke="#07121B" stroke-width="8" stroke-linejoin="round" paint-order="stroke"/>
+</svg></span>
+   <span class="iso iso-claro"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 140" aria-hidden="true" focusable="false">
+<defs><linearGradient id="borde-sb-claro" x1="0" y1="0" x2="190" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0.5" stop-color="#0A2C4A"/><stop offset="0.5" stop-color="#166372"/></linearGradient></defs>
 <rect x="8" y="28" width="162" height="84" rx="16" fill="none" stroke="url(#borde-sb-claro)" stroke-width="9"/>
 <rect x="174" y="52" width="11" height="36" rx="4" fill="#166372"/>
 <text x="40" y="93" text-anchor="middle" font-family="Montserrat, 'Segoe UI', Arial, sans-serif" font-weight="800" font-size="64" fill="#0A2C4A">S</text>
 <text x="139" y="93" text-anchor="middle" font-family="Montserrat, 'Segoe UI', Arial, sans-serif" font-weight="800" font-size="64" fill="#166372">B</text>
 <path d="M103 2 L67 78 L88 78 L73 138 L113 56 L91 56 Z" fill="#D39B22" stroke="#FFFFFF" stroke-width="8" stroke-linejoin="round" paint-order="stroke"/>
-</svg><!--/iso--></span>
+</svg></span>
    <span class="ln">SOLUTION <i>&amp;</i> <b>BESS</b></span>
   </a>
-  <nav aria-label="Secciones">
-   <a href="#diagnostico">Diagnóstico</a>
-   <a href="#como">Cómo funciona</a>
-   <a href="#nosotros">Por qué nosotros</a>
+
+  <nav class="menu" aria-label="Secciones">
+   <a href="#proyectos">Proyectos</a>
+   <a href="#usos">Usos</a>
+   <a href="#metodo">Método</a>
+   <a href="#tecnologia">Tecnología</a>
+   <a href="#latinoamerica">Latinoamérica</a>
+   <a href="#preguntas">Preguntas</a>
   </nav>
-  <a class="boton chico" href="#contacto">Solicita tu diagnóstico</a>
+
+  <a class="boton chico barra-boton" href="#contacto" aria-label="Cuéntanos tu proyecto"><span class="bb-l">Cuéntanos tu proyecto</span><span class="bb-c">Tu proyecto</span></a>
+
+  <details class="menu-movil">
+   <summary><span class="rayas" aria-hidden="true"></span>Menú</summary>
+   <nav class="menu-movil-panel" aria-label="Secciones, menú de celular">
+    <a href="#proyectos">Proyectos</a>
+    <a href="/diagnostico-renovacion">Diagnóstico de renovación (Chile)</a>
+    <a href="#usos">Usos de una batería</a>
+    <a href="#estimador">Estima el tamaño</a>
+    <a href="#metodo">Método</a>
+    <a href="#tecnologia">Tecnología</a>
+    <a href="#latinoamerica">Latinoamérica</a>
+    <a href="#preguntas">Preguntas</a>
+    <a class="boton" href="#contacto">Cuéntanos tu proyecto <span class="fl" aria-hidden="true">→</span></a>
+   </nav>
+  </details>
  </div>
 </header>
 
-<main id="inicio">
+<main id="contenido">
 
-<section class="hero">
- <div class="ancho hero-grid">
-  <div>
-   <p class="ceja">Para empresas con contrato eléctrico libre</p>
-   <h1>¿Tu contrato eléctrico vence en 2027?</h1>
-   <p class="bajada">Llega a la renovación con los números claros. Revisamos tu contrato, tus facturas y cómo se te cobra la potencia, y te decimos qué conviene negociar: precio, potencia, baterías o solar. Si no hace falta cambiar nada, también te lo decimos.</p>
+<!-- ================= PORTADA ================= -->
+<section class="portada" id="inicio" aria-labelledby="titular">
+ <div class="portada-medio">
+  <picture>
+   <source media="(max-width: 899px)" type="image/avif" srcset="/assets/portada-movil.avif" width="810" height="1080">
+   <source media="(max-width: 899px)" type="image/webp" srcset="/assets/portada-movil.webp" width="810" height="1080">
+   <source type="image/avif" srcset="/assets/portada-escritorio.avif" width="1280" height="720">
+   <img class="portada-foto" src="/assets/portada-escritorio.webp" width="1280" height="720" alt="Vista aérea de un parque solar: filas de paneles, caminos de servicio y una caseta de equipos." fetchpriority="high" decoding="async">
+  </picture>
+  <video class="portada-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" disablepictureinpicture>
+   <source src="/assets/portada-1280.mp4" type="video/mp4">
+  </video>
+ </div>
+ <div class="portada-velo" aria-hidden="true"></div>
+
+ <div class="reticula portada-cuerpo">
+  <div class="portada-texto">
+   <p class="ceja"><span>Ingeniería en energía y almacenamiento</span> <span class="sep" aria-hidden="true">·</span> <span>Latinoamérica</span></p>
+   <h1 class="titular" id="titular"><span class="l">Ingeniería para tu proyecto</span> <span class="l">de <em>baterías, solar o híbrido</em></span> <span class="l">en Latinoamérica</span></h1>
+   <p class="bajada">Trae la idea, el terreno o el problema de demanda. Lo convertimos en un proyecto dimensionado, especificado y listo para licitar, construir y conectar.</p>
    <div class="acciones">
-    <a class="boton" href="#contacto">Solicita tu diagnóstico <span aria-hidden="true">→</span></a>
-    <a class="enlace" href="#como">Cómo funciona</a>
+    <a class="boton claro" href="#contacto">Cuéntanos tu proyecto <span class="fl" aria-hidden="true">→</span></a>
+    <a class="enlace" href="#metodo">Cómo trabajamos</a>
    </div>
   </div>
-  <figure class="ilus">
-   <!--bess--><svg role="img" aria-label="Ilustración de un sistema de baterías en contenedor conectado a una planta" viewBox="0 0 952 760" xmlns="http://www.w3.org/2000/svg">
- <defs><clipPath id="hueco"><rect x="56" y="78" width="840" height="262"/></clipPath></defs>
- <path id="cable" d="M760 386 V458 H135 V500 M210 590 H330 M480 590 H640" fill="none" stroke="#166372" stroke-width="7"
-   stroke-linecap="round" stroke-linejoin="round" />
- <g id="cont">
-  <rect x="26" y="40" width="900" height="330" rx="12" fill="#EEF3F5" stroke="#0A2C4A" stroke-width="6"/>
-  <rect x="26" y="40" width="900" height="24" rx="10" fill="#0A2C4A"/>
-  <rect x="56" y="78" width="840" height="262" fill="#0F2F4D"/>
-  <rect x="68.0" y="92" width="89" height="70" rx="6" fill="#0A2C4A"/><rect x="78.0" y="102" width="55" height="50" rx="3" fill="#123A5C"/><rect x="78.0" y="106.0" width="55" height="46.0" rx="3" fill="#3FB6A8"/><circle cx="144.0" cy="108" r="5" fill="#D39B22"/><rect x="139.0" y="122" width="10" height="28" rx="2" fill="#2A5578"/><rect x="171.0" y="92" width="89" height="70" rx="6" fill="#0A2C4A"/><rect x="181.0" y="102" width="55" height="50" rx="3" fill="#123A5C"/><rect x="181.0" y="109.5" width="55" height="42.5" rx="3" fill="#3FB6A8"/><circle cx="247.0" cy="108" r="5" fill="#D39B22"/><rect x="242.0" y="122" width="10" height="28" rx="2" fill="#2A5578"/><rect x="274.0" y="92" width="89" height="70" rx="6" fill="#0A2C4A"/><rect x="284.0" y="102" width="55" height="50" rx="3" fill="#123A5C"/><rect x="284.0" y="104.5" width="55" height="47.5" rx="3" fill="#3FB6A8"/><circle cx="350.0" cy="108" r="5" fill="#D39B22"/><rect x="345.0" y="122" width="10" height="28" rx="2" fill="#2A5578"/><rect x="377.0" y="92" width="89" height="70" rx="6" fill="#0A2C4A"/><rect x="387.0" y="102" width="55" height="50" rx="3" fill="#123A5C"/><rect x="387.0" y="108.0" width="55" height="44.0" rx="3" fill="#3FB6A8"/><circle cx="453.0" cy="108" r="5" fill="#D39B22"/><rect x="448.0" y="122" width="10" height="28" rx="2" fill="#2A5578"/><rect x="480.0" y="92" width="89" height="70" rx="6" fill="#0A2C4A"/><rect x="490.0" y="102" width="55" height="50" rx="3" fill="#123A5C"/><rect x="490.0" y="112.0" width="55" height="40.0" rx="3" fill="#3FB6A8"/><circle cx="556.0" cy="108" r="5" fill="#D39B22"/><rect x="551.0" y="122" width="10" height="28" rx="2" fill="#2A5578"/><rect x="583.0" y="92" width="89" height="70" rx="6" fill="#0A2C4A"/><rect x="593.0" y="102" width="55" height="50" rx="3" fill="#123A5C"/><rect x="593.0" y="107.0" width="55" height="45.0" rx="3" fill="#3FB6A8"/><circle cx="659.0" cy="108" r="5" fill="#D39B22"/><rect x="654.0" y="122" width="10" height="28" rx="2" fill="#2A5578"/><rect x="686.0" y="92" width="89" height="70" rx="6" fill="#0A2C4A"/><rect x="696.0" y="102" width="55" height="50" rx="3" fill="#123A5C"/><rect x="696.0" y="109.0" width="55" height="43.0" rx="3" fill="#3FB6A8"/><circle cx="762.0" cy="108" r="5" fill="#D39B22"/><rect x="757.0" y="122" width="10" height="28" rx="2" fill="#2A5578"/><rect x="789.0" y="92" width="89" height="70" rx="6" fill="#0A2C4A"/><rect x="799.0" y="102" width="55" height="50" rx="3" fill="#123A5C"/><rect x="799.0" y="105.5" width="55" height="46.5" rx="3" fill="#3FB6A8"/><circle cx="865.0" cy="108" r="5" fill="#D39B22"/><rect x="860.0" y="122" width="10" height="28" rx="2" fill="#2A5578"/><rect x="68.0" y="174" width="89" height="70" rx="6" fill="#0A2C4A"/><rect x="78.0" y="184" width="55" height="50" rx="3" fill="#123A5C"/><rect x="78.0" y="193.0" width="55" height="41.0" rx="3" fill="#3FB6A8"/><circle cx="144.0" cy="190" r="5" fill="#D39B22"/><rect x="139.0" y="204" width="10" height="28" rx="2" fill="#2A5578"/><rect x="171.0" y="174" width="89" height="70" rx="6" fill="#0A2C4A"/><rect x="181.0" y="184" width="55" height="50" rx="3" fill="#123A5C"/><rect x="181.0" y="189.0" width="55" height="45.0" rx="3" fill="#3FB6A8"/><circle cx="247.0" cy="190" r="5" fill="#D39B22"/><rect x="242.0" y="204" width="10" height="28" rx="2" fill="#2A5578"/><rect x="274.0" y="174" width="89" height="70" rx="6" fill="#0A2C4A"/><rect x="284.0" y="184" width="55" height="50" rx="3" fill="#123A5C"/><rect x="284.0" y="187.0" width="55" height="47.0" rx="3" fill="#3FB6A8"/><circle cx="350.0" cy="190" r="5" fill="#D39B22"/><rect x="345.0" y="204" width="10" height="28" rx="2" fill="#2A5578"/><rect x="377.0" y="174" width="89" height="70" rx="6" fill="#0A2C4A"/><rect x="387.0" y="184" width="55" height="50" rx="3" fill="#123A5C"/><rect x="387.0" y="190.5" width="55" height="43.5" rx="3" fill="#3FB6A8"/><circle cx="453.0" cy="190" r="5" fill="#D39B22"/><rect x="448.0" y="204" width="10" height="28" rx="2" fill="#2A5578"/><rect x="480.0" y="174" width="89" height="70" rx="6" fill="#0A2C4A"/><rect x="490.0" y="184" width="55" height="50" rx="3" fill="#123A5C"/><rect x="490.0" y="188.5" width="55" height="45.5" rx="3" fill="#3FB6A8"/><circle cx="556.0" cy="190" r="5" fill="#D39B22"/><rect x="551.0" y="204" width="10" height="28" rx="2" fill="#2A5578"/><rect x="583.0" y="174" width="89" height="70" rx="6" fill="#0A2C4A"/><rect x="593.0" y="184" width="55" height="50" rx="3" fill="#123A5C"/><rect x="593.0" y="192.0" width="55" height="42.0" rx="3" fill="#3FB6A8"/><circle cx="659.0" cy="190" r="5" fill="#D39B22"/><rect x="654.0" y="204" width="10" height="28" rx="2" fill="#2A5578"/><rect x="686.0" y="174" width="89" height="70" rx="6" fill="#0A2C4A"/><rect x="696.0" y="184" width="55" height="50" rx="3" fill="#123A5C"/><rect x="696.0" y="189.5" width="55" height="44.5" rx="3" fill="#3FB6A8"/><circle cx="762.0" cy="190" r="5" fill="#D39B22"/><rect x="757.0" y="204" width="10" height="28" rx="2" fill="#2A5578"/><rect x="789.0" y="174" width="89" height="70" rx="6" fill="#0A2C4A"/><rect x="799.0" y="184" width="55" height="50" rx="3" fill="#123A5C"/><rect x="799.0" y="186.5" width="55" height="47.5" rx="3" fill="#3FB6A8"/><circle cx="865.0" cy="190" r="5" fill="#D39B22"/><rect x="860.0" y="204" width="10" height="28" rx="2" fill="#2A5578"/><rect x="68.0" y="256" width="89" height="70" rx="6" fill="#0A2C4A"/><rect x="78.0" y="266" width="55" height="50" rx="3" fill="#123A5C"/><rect x="78.0" y="272.0" width="55" height="44.0" rx="3" fill="#3FB6A8"/><circle cx="144.0" cy="272" r="5" fill="#D39B22"/><rect x="139.0" y="286" width="10" height="28" rx="2" fill="#2A5578"/><rect x="171.0" y="256" width="89" height="70" rx="6" fill="#0A2C4A"/><rect x="181.0" y="266" width="55" height="50" rx="3" fill="#123A5C"/><rect x="181.0" y="269.5" width="55" height="46.5" rx="3" fill="#3FB6A8"/><circle cx="247.0" cy="272" r="5" fill="#D39B22"/><rect x="242.0" y="286" width="10" height="28" rx="2" fill="#2A5578"/><rect x="274.0" y="256" width="89" height="70" rx="6" fill="#0A2C4A"/><rect x="284.0" y="266" width="55" height="50" rx="3" fill="#123A5C"/><rect x="284.0" y="273.5" width="55" height="42.5" rx="3" fill="#3FB6A8"/><circle cx="350.0" cy="272" r="5" fill="#D39B22"/><rect x="345.0" y="286" width="10" height="28" rx="2" fill="#2A5578"/><rect x="377.0" y="256" width="89" height="70" rx="6" fill="#0A2C4A"/><rect x="387.0" y="266" width="55" height="50" rx="3" fill="#123A5C"/><rect x="387.0" y="271.0" width="55" height="45.0" rx="3" fill="#3FB6A8"/><circle cx="453.0" cy="272" r="5" fill="#D39B22"/><rect x="448.0" y="286" width="10" height="28" rx="2" fill="#2A5578"/><rect x="480.0" y="256" width="89" height="70" rx="6" fill="#0A2C4A"/><rect x="490.0" y="266" width="55" height="50" rx="3" fill="#123A5C"/><rect x="490.0" y="273.0" width="55" height="43.0" rx="3" fill="#3FB6A8"/><circle cx="556.0" cy="272" r="5" fill="#D39B22"/><rect x="551.0" y="286" width="10" height="28" rx="2" fill="#2A5578"/><rect x="583.0" y="256" width="89" height="70" rx="6" fill="#0A2C4A"/><rect x="593.0" y="266" width="55" height="50" rx="3" fill="#123A5C"/><rect x="593.0" y="270.0" width="55" height="46.0" rx="3" fill="#3FB6A8"/><circle cx="659.0" cy="272" r="5" fill="#D39B22"/><rect x="654.0" y="286" width="10" height="28" rx="2" fill="#2A5578"/><rect x="686.0" y="256" width="89" height="70" rx="6" fill="#0A2C4A"/><rect x="696.0" y="266" width="55" height="50" rx="3" fill="#123A5C"/><rect x="696.0" y="274.5" width="55" height="41.5" rx="3" fill="#3FB6A8"/><circle cx="762.0" cy="272" r="5" fill="#D39B22"/><rect x="757.0" y="286" width="10" height="28" rx="2" fill="#2A5578"/><rect x="789.0" y="256" width="89" height="70" rx="6" fill="#0A2C4A"/><rect x="799.0" y="266" width="55" height="50" rx="3" fill="#123A5C"/><rect x="799.0" y="271.0" width="55" height="45.0" rx="3" fill="#3FB6A8"/><circle cx="865.0" cy="272" r="5" fill="#D39B22"/><rect x="860.0" y="286" width="10" height="28" rx="2" fill="#2A5578"/>
-  
-  <rect x="40" y="370" width="60" height="16" fill="#0A2C4A"/><rect x="852" y="370" width="60" height="16" fill="#0A2C4A"/>
- </g>
- <text class="etq" x="30" y="428" text-anchor="start" style="font:500 27px 'IBM Plex Sans',sans-serif;fill:#5B6B78">Módulos de baterías de litio</text>
- <g id="pcs"><rect x="60" y="500" width="150" height="180" rx="10" fill="#0A2C4A"/>
-  <path d="M85 590 q16 -36 32 0 t32 0 t32 0" fill="none" stroke="#3FB6A8" stroke-width="6" stroke-linecap="round"/>
-  <rect x="85" y="625" width="100" height="10" rx="4" fill="#2A5578"/></g>
- <text class="etq" x="135" y="722" text-anchor="middle" style="font:500 27px 'IBM Plex Sans',sans-serif;fill:#5B6B78">Conversor (PCS)</text>
- <g id="trafo"><rect x="330" y="520" width="150" height="140" rx="10" fill="#0A2C4A"/><rect x="342" y="530" width="10" height="120" rx="3" fill="#2A5578"/><rect x="364" y="530" width="10" height="120" rx="3" fill="#2A5578"/><rect x="386" y="530" width="10" height="120" rx="3" fill="#2A5578"/><rect x="408" y="530" width="10" height="120" rx="3" fill="#2A5578"/><rect x="430" y="530" width="10" height="120" rx="3" fill="#2A5578"/><rect x="452" y="530" width="10" height="120" rx="3" fill="#2A5578"/>
-  <rect x="352" y="502" width="20" height="22" rx="3" fill="#D39B22"/><rect x="438" y="502" width="20" height="22" rx="3" fill="#D39B22"/></g>
- <text class="etq" x="405" y="722" text-anchor="middle" style="font:500 27px 'IBM Plex Sans',sans-serif;fill:#5B6B78">Transformador</text>
- <g id="planta"><path d="M640 690 V560 L700 520 V560 L760 520 V560 L820 520 V560 L880 520 V690 Z" fill="#0A2C4A"/><rect x="845" y="470" width="26" height="70" fill="#0A2C4A"/><rect x="660" y="600" width="34" height="34" rx="3" fill="#D39B22" opacity=".9"/><rect x="716" y="600" width="34" height="34" rx="3" fill="#D39B22" opacity=".9"/><rect x="772" y="600" width="34" height="34" rx="3" fill="#D39B22" opacity=".9"/><rect x="828" y="600" width="34" height="34" rx="3" fill="#D39B22" opacity=".9"/></g>
- <text class="etq" x="760" y="722" text-anchor="middle" style="font:500 27px 'IBM Plex Sans',sans-serif;fill:#5B6B78">Tu planta</text>
- <circle cx="760" cy="420" r="9" fill="#D39B22"/><circle cx="560" cy="458" r="9" fill="#D39B22"/><circle cx="330" cy="458" r="9" fill="#D39B22"/><circle cx="135" cy="480" r="9" fill="#D39B22"/><circle cx="270" cy="590" r="9" fill="#D39B22"/><circle cx="560" cy="590" r="9" fill="#D39B22"/>
-</svg>
-   <figcaption>Ilustración esquemática: baterías en contenedor, conversor, transformador y tu planta.</figcaption>
-  </figure>
- </div>
-</section>
 
-<section class="palancas">
- <div class="ancho">
-  <h2>Tres cosas que conviene revisar antes de renovar</h2>
-  <div class="tres">
-   <article>
-    <span class="n">1</span>
-    <h3>Precio</h3>
-    <p>Cuánto pagas por la energía, cómo se reajusta y qué condiciones del contrato conviene renegociar.</p>
-   </article>
-   <article>
-    <span class="n">2</span>
-    <h3>Potencia</h3>
-    <p>Con demanda máxima leída, un solo pico puede definir el cargo de todo el mes. Con potencia contratada, puedes estar pagando kW que tu operación no usa.</p>
-   </article>
-   <article>
-    <span class="n">3</span>
-    <h3>Horario</h3>
-    <p>Mover consumo de horario, con baterías (BESS) o solar, cambia cuándo y cuánto le compras a la red.</p>
-   </article>
-  </div>
- </div>
-</section>
-
-<section class="dato">
- <div class="ancho dato-grid">
-  <p class="cifra">2.507 <span>MW</span></p>
-  <div>
-   <p class="dato-txt">en baterías se conectaron al sistema eléctrico chileno en 2026: más que en todos los años anteriores juntos (1.790 MW).</p>
-   <p class="dato-txt2">Si tu contrato vence en 2027, vas a negociar en un sistema muy distinto al de cuando lo firmaste.</p>
-   <p class="fuente">Fuente: Coordinador Eléctrico Nacional, Infotécnica, compensadores activos, consultado el 23/11/2026. Potencia del banco de baterías; 2026 hasta el 23/11.</p>
-  </div>
- </div>
-</section>
-
-<section id="diagnostico" class="oferta">
- <div class="ancho oferta-grid">
-  <div>
-   <p class="ceja">La puerta de entrada</p>
-   <h2>Diagnóstico de renovación</h2>
-   <p>Un servicio corto y concreto, con valor propio aunque después no sigas con nosotros.</p>
-   <ul class="lista">
-    <li>Revisamos tu contrato y sus anexos, y hasta tres facturas recientes del mismo suministro.</li>
-    <li>Conversamos 45 minutos sobre tu operación y tus consumos, en línea o presencial.</li>
-    <li>En dos días hábiles te entregamos un informe de hasta dos páginas.</li>
-   </ul>
-   <p class="sub">El informe te dice:</p>
-   <ul class="lista check">
-    <li>qué estás pagando y por qué;</li>
-    <li>qué conviene negociar en la renovación;</li>
-    <li>si vale la pena estudiar baterías o solar en tu caso;</li>
-    <li>qué datos faltan para decidir.</li>
-   </ul>
-   <p class="nota">No incluye visita técnica, mediciones, ingeniería ni cotización de equipos: si hacen falta, se cotizan aparte.</p>
-  </div>
-  <aside class="precio" aria-label="Valor del diagnóstico">
-   <p class="p-lbl">Valor</p>
-   <p class="p-num chico">A consultar</p>
-   <p class="p-desc">Es un servicio pagado. Te enviamos el alcance y el valor por escrito antes de agendar, sin compromiso.</p>
-   <a class="boton ancho-total" href="#contacto">Solicita tu diagnóstico <span aria-hidden="true">→</span></a>
+  <aside class="inicio-pasos" aria-labelledby="t-inicio-pasos">
+   <h2 id="t-inicio-pasos">Así empezamos</h2>
+   <ol>
+    <li>Nos cuentas el proyecto, con los datos que tengas.</li>
+    <li>Conversamos 30 minutos.</li>
+    <li>Recibes una propuesta con alcance, entregables, plazos y precio.</li>
+   </ol>
   </aside>
  </div>
+
+ <div class="reticula portada-pie">
+  <div class="portada-rotulos">
+   <p class="rotulo">Imagen de referencia</p>
+   <button class="pausa" type="button" hidden data-pausado="false"><span class="pausa-icono" aria-hidden="true"></span><span class="pausa-texto">Pausar video</span></button>
+  </div>
+  <ul class="hechos">
+   <li>Base en Chile, para proyectos de toda Latinoamérica</li>
+   <li>Baterías (BESS), solar e híbridos</li>
+   <li>De la prefactibilidad a la puesta en marcha</li>
+   <li>Normas IEC, IEEE, UL y NFPA como referencia</li>
+  </ul>
+ </div>
 </section>
 
-<section id="como" class="pasos">
- <div class="ancho">
-  <h2>Cómo funciona</h2>
-  <ol class="cinco">
-   <li><b>Nos escribes</b><span>con el nombre de la empresa y cuándo vence tu contrato.</span></li>
-   <li><b>Te enviamos el alcance</b><span>y nos mandas el contrato y las facturas en PDF.</span></li>
-   <li><b>Conversamos 45 minutos</b><span>sobre tu operación y tus consumos.</span></li>
-   <li><b>Recibes el informe</b><span>en dos días hábiles.</span></li>
-   <li><b>Tú decides</b><span>si sigues con un estudio, renegocias por tu cuenta o lo dejas como está.</span></li>
+<!-- ================= FABRICANTES ================= -->
+<section class="fabricantes" aria-labelledby="t-fabricantes">
+ <div class="reticula">
+  <h2 class="etiqueta" id="t-fabricantes">Trabajamos con equipos de</h2>
+  <ul class="marcas">
+   <li>HiTHIUM</li>
+   <li>Jinko ESS</li>
+   <li>CORNEX</li>
+   <li>Kehua</li>
+   <li>SOFAR</li>
+  </ul>
+  <p class="nota">Marcas de sus respectivos titulares. Su mención no implica representación, distribución ni respaldo. <a href="#tecnologia">Cómo elegimos los equipos</a></p>
+ </div>
+</section>
+
+<aside class="aviso-chile" aria-label="Servicio para Chile">
+ <div class="reticula">
+  <p>¿Cliente libre en Chile con el contrato eléctrico por vencer? <a href="/diagnostico-renovacion">Ver el Diagnóstico de renovación <span aria-hidden="true">→</span></a></p>
+ </div>
+</aside>
+
+<!-- ================= 01 PROYECTOS ================= -->
+<section class="seccion" id="proyectos" aria-labelledby="t-proyectos">
+ <div class="reticula cabecera">
+  <p class="num" aria-hidden="true">01</p>
+  <p class="etiqueta">Proyectos</p>
+  <h2 class="tit" id="t-proyectos">Qué proyectos puedes traer</h2>
+  <p class="entrada">Seis tipos de encargo, solos o combinados. Si el tuyo no está en la lista, cuéntanos de todos modos.</p>
+ </div>
+ <div class="reticula">
+  <ol class="encargos">
+   <li>
+    <h3>Almacenamiento con baterías (BESS)</h3>
+    <p>Dimensionamiento, casos de uso, especificación técnica y evaluación de ofertas para sistemas de almacenamiento, desde un gabinete industrial hasta una planta a escala de red.</p>
+    <ul class="entregas" aria-label="Entregas típicas"><li>Memoria de dimensionamiento</li><li>Especificación técnica</li><li>Comparación de ofertas</li></ul>
+   </li>
+   <li>
+    <h3>Parques solares y plantas fotovoltaicas</h3>
+    <p>Prefactibilidad, diseño eléctrico, estimación de producción e ingeniería para generación solar conectada a la red o para consumo propio.</p>
+    <ul class="entregas" aria-label="Entregas típicas"><li>Estudio de prefactibilidad</li><li>Estimación de producción</li><li>Planos y memorias</li></ul>
+   </li>
+   <li>
+    <h3>Sistemas híbridos y microrredes</h3>
+    <p>Solar, baterías y generación de respaldo que operan de forma coordinada: para sitios con red débil, operación aislada o gestión de la demanda.</p>
+    <ul class="entregas" aria-label="Entregas típicas"><li>Arquitectura del sistema</li><li>Filosofía de control</li><li>Análisis de operación</li></ul>
+   </li>
+   <li>
+    <h3>Estudios eléctricos y de conexión</h3>
+    <p>Flujo de carga, cortocircuito, coordinación de protecciones y los estudios que pida el operador o la distribuidora de tu país para conectar (o interconectar) el proyecto.</p>
+    <ul class="entregas" aria-label="Entregas típicas"><li>Informes de estudio</li><li>Diagrama unifilar</li><li>Respuesta a observaciones</li></ul>
+   </li>
+   <li>
+    <h3>Especificación y compra de equipos</h3>
+    <p>Pliego técnico, comparación de ofertas de fabricantes, revisión de garantías y acompañamiento en las pruebas de fábrica y de sitio.</p>
+    <ul class="entregas" aria-label="Entregas típicas"><li>Pliego técnico</li><li>Matriz de comparación</li><li>Protocolos de prueba</li></ul>
+   </li>
+   <li>
+    <h3>Evaluación técnico-económica</h3>
+    <p>Qué solución conviene estudiar y cuál no: alternativas comparadas, con los supuestos a la vista y la sensibilidad a los datos que más pesan.</p>
+    <ul class="entregas" aria-label="Entregas típicas"><li>Alternativas comparadas</li><li>Supuestos</li><li>Recomendación</li></ul>
+   </li>
   </ol>
-  <div class="despues">
-   <h3>Si después quieres ir más allá</h3>
-   <p>Estudio con mediciones y evaluación económica · Apoyo en la negociación del contrato · Ingeniería e instalación de baterías y solar · Operación y monitoreo.</p>
+ </div>
+</section>
+
+<!-- ================= 02 USOS ================= -->
+<section class="seccion fondo-suave" id="usos" aria-labelledby="t-usos">
+ <div class="reticula cabecera">
+  <p class="num" aria-hidden="true">02</p>
+  <p class="etiqueta">Usos de una batería</p>
+  <h2 class="tit" id="t-usos"><span class="fr">Una batería hace varias cosas.</span> <span class="fr">La ingeniería decide cuáles sirven a tu proyecto.</span></h2>
+  <p class="entrada">Elige un uso para ver cómo opera el sistema y qué se define en el diseño. Las curvas son ilustrativas.</p>
+ </div>
+ <div class="reticula">
+  <div class="usos" data-usos>
+
+   <section class="uso" id="uso-recorte" data-uso>
+    <div class="uso-texto">
+     <h3>Recorte de punta</h3>
+     <p class="alias">También se dice recorte de picos o <i lang="en">peak shaving</i>.</p>
+     <dl>
+      <div><dt>Qué hace</dt><dd>La batería se descarga cuando tu demanda se acerca a un límite. El medidor registra una demanda máxima menor.</dd></div>
+      <div><dt>Cuándo aplica</dt><dd>Si tu tarifa o tu contrato cobra por potencia o por demanda máxima.</dd></div>
+      <div><dt>Qué definimos en ingeniería</dt><dd>Potencia y horas de la batería, umbral de recorte y lógica de control.</dd></div>
+     </dl>
+    </div>
+    <figure class="viz" data-viz="recorte" hidden>
+     <p class="viz-titulo">Demanda de una planta durante un día <span>kW</span></p>
+     <figcaption>Curva ilustrativa: no corresponde a un cliente ni a un resultado garantizado.</figcaption>
+    </figure>
+   </section>
+
+   <section class="uso" id="uso-desplazamiento" data-uso>
+    <div class="uso-texto">
+     <h3>Desplazamiento de energía</h3>
+     <dl>
+      <div><dt>Qué hace</dt><dd>Carga cuando la energía sobra o cuesta menos, y entrega cuando falta o cuesta más.</dd></div>
+      <div><dt>Cuándo aplica</dt><dd>Si tu precio cambia por bloque horario o participas en un mercado mayorista.</dd></div>
+      <div><dt>Qué definimos en ingeniería</dt><dd>Ciclos por día, energía útil, degradación esperada y reglas de despacho.</dd></div>
+     </dl>
+    </div>
+    <figure class="viz" data-viz="desplazamiento" hidden>
+     <p class="viz-titulo">Compra de energía a la red durante un día <span>kW</span></p>
+     <figcaption>Curva ilustrativa: no corresponde a un cliente ni a un resultado garantizado.</figcaption>
+    </figure>
+   </section>
+
+   <section class="uso" id="uso-solar" data-uso>
+    <div class="uso-texto">
+     <h3>Solar con almacenamiento</h3>
+     <dl>
+      <div><dt>Qué hace</dt><dd>Guarda la generación solar que al mediodía no puedes consumir ni inyectar, y la entrega por la tarde y la noche.</dd></div>
+      <div><dt>Cuándo aplica</dt><dd>Parques con límites de inyección o contratos por bloque horario, y empresas con generación solar propia.</dd></div>
+      <div><dt>Qué definimos en ingeniería</dt><dd>Acople en corriente continua o alterna, relación entre potencia solar y batería, y condiciones de conexión.</dd></div>
+     </dl>
+    </div>
+    <figure class="viz" data-viz="solar" hidden>
+     <p class="viz-titulo">Parque solar con límite de inyección <span>MW</span></p>
+     <figcaption>Curva ilustrativa: no corresponde a un proyecto ni a un resultado garantizado.</figcaption>
+    </figure>
+   </section>
+
+   <section class="uso" id="uso-respaldo" data-uso>
+    <div class="uso-texto">
+     <h3>Respaldo y continuidad</h3>
+     <dl>
+      <div><dt>Qué hace</dt><dd>Ante un corte, la batería toma la carga crítica y la sostiene el tiempo para el que fue diseñada. El tiempo de transferencia depende del diseño: desde milisegundos hasta algunos segundos.</dd></div>
+      <div><dt>Cuándo aplica</dt><dd>Procesos que no toleran interrupciones y sitios con red débil. Para autonomías largas se combina con generación.</dd></div>
+      <div><dt>Qué definimos en ingeniería</dt><dd>Cargas críticas, autonomía, tipo y tiempo de transferencia, y operación en isla.</dd></div>
+     </dl>
+    </div>
+    <figure class="viz" data-viz="respaldo" hidden>
+     <p class="viz-titulo">Suministro a la carga crítica durante un corte <span>kW</span></p>
+     <figcaption>Curva ilustrativa: no corresponde a un cliente ni a un resultado garantizado.</figcaption>
+    </figure>
+   </section>
+
+   <section class="uso" id="uso-red" data-uso>
+    <div class="uso-texto">
+     <h3>Servicios de red</h3>
+     <dl>
+      <div><dt>Qué hace</dt><dd>Inyecta o absorbe potencia en menos de un segundo para sostener la frecuencia y la tensión del sistema.</dd></div>
+      <div><dt>Cuándo aplica</dt><dd>Proyectos a escala de red, donde la regulación del país remunera estos servicios.</dd></div>
+      <div><dt>Qué definimos en ingeniería</dt><dd>Requisitos del operador, tiempos de respuesta, modo de control del conversor y pruebas de habilitación.</dd></div>
+     </dl>
+    </div>
+    <figure class="viz" data-viz="red" hidden>
+     <p class="viz-titulo">Frecuencia del sistema tras la salida de una central <span>desviación en Hz</span></p>
+     <figcaption>Curva ilustrativa: no corresponde a un sistema eléctrico real.</figcaption>
+    </figure>
+   </section>
+
   </div>
  </div>
 </section>
 
-<section id="nosotros" class="nosotros">
- <div class="ancho">
-  <p class="ceja">Por qué nosotros</p>
-  <h2>Ingeniería en energía y almacenamiento</h2>
-  <p class="destacado">La mayoría de los asesores mira sólo el precio del contrato. Nosotros además sabemos dimensionar e instalar baterías, que es lo que cambia cómo y cuándo consume tu empresa.</p>
-  <p>Por eso el diagnóstico no termina en «renegocia el precio»: también te dice si te conviene cambiar cómo y cuándo compras energía.</p>
+<!-- ================= 03 ESTIMADOR ================= -->
+<section class="seccion fondo-azul" id="estimador" aria-labelledby="t-estimador">
+ <div class="reticula cabecera">
+  <p class="num" aria-hidden="true">03</p>
+  <p class="etiqueta">Orden de magnitud</p>
+  <h2 class="tit" id="t-estimador">Estima el tamaño de tu batería</h2>
+  <p class="entrada">Un orden de magnitud para empezar la conversación. No reemplaza un estudio.</p>
  </div>
-</section>
+ <div class="reticula">
+  <div class="predim" data-predim>
+   <form class="predim-entradas" novalidate>
+    <fieldset class="predim-usos">
+     <legend>Uso principal</legend>
+     <label><input type="radio" name="pd_uso" value="recorte" checked><span>Recorte de punta</span></label>
+     <label><input type="radio" name="pd_uso" value="desplazamiento"><span>Desplazamiento de energía</span></label>
+     <label><input type="radio" name="pd_uso" value="solar"><span>Solar con almacenamiento</span></label>
+     <label><input type="radio" name="pd_uso" value="respaldo"><span>Respaldo y continuidad</span></label>
+     <label><input type="radio" name="pd_uso" value="red"><span>Servicios de red</span></label>
+    </fieldset>
+    <div class="campo">
+     <label for="pd-potencia">Potencia a cubrir</label>
+     <div class="con-unidad">
+      <input id="pd-potencia" name="pd_potencia" type="text" inputmode="decimal" autocomplete="off" value="500" aria-describedby="pd-ayuda-potencia pd-aviso">
+      <select id="pd-unidad" name="pd_unidad" aria-label="Unidad de potencia"><option value="kW" selected>kW</option><option value="MW">MW</option></select>
+     </div>
+     <p class="ayuda" id="pd-ayuda-potencia" data-pd="ayuda-potencia">Los kW que quieres recortar de tu demanda máxima.</p>
+    </div>
+    <div class="campo">
+     <label for="pd-horas">Duración <output for="pd-horas" data-pd="horas">2 horas</output></label>
+     <input id="pd-horas" name="pd_horas" type="range" min="0.5" max="8" step="0.5" value="2" aria-describedby="pd-ayuda-horas">
+     <p class="ayuda" id="pd-ayuda-horas" data-pd="ayuda-horas">Punto de partida habitual: de 1 a 2 horas. Depende de cuánto dura tu pico de demanda.</p>
+    </div>
+   </form>
 
-<section class="preguntas">
- <div class="ancho">
-  <h2>Preguntas frecuentes</h2>
-  <details>
-   <summary>¿Por qué el diagnóstico es pagado?</summary>
-   <p>Porque es trabajo real: leemos tu contrato y tus facturas y te entregamos un informe con recomendaciones concretas. Antes de agendar te enviamos el alcance y el valor por escrito.</p>
-  </details>
-  <details>
-   <summary>¿Necesito tener curvas de consumo o mediciones?</summary>
-   <p>No. Para el diagnóstico basta el contrato y las últimas facturas. Si hace falta medir, te lo decimos en el informe.</p>
-  </details>
-  <details>
-   <summary>¿Me van a querer vender baterías sí o sí?</summary>
-   <p>No. El diagnóstico es independiente: si en tu caso no conviene sumar baterías o solar, el informe lo dice.</p>
-  </details>
-  <details>
-   <summary>¿Cuánto voy a ahorrar?</summary>
-   <p>No damos cifras sin ver tus facturas. El diagnóstico sirve justamente para saber dónde hay espacio y dónde no.</p>
-  </details>
-  <details>
-   <summary>¿Qué hacen con mis documentos?</summary>
-   <p>Los usamos sólo para tu diagnóstico y no los compartimos con suministradores ni con terceros. Más detalle en la <a href="/privacidad">política de privacidad</a>.</p>
-  </details>
- </div>
-</section>
+   <div class="predim-salida">
+    <p class="predim-ejemplo" data-pd-ejemplo>Ejemplo: 500 kW durante 2 horas.</p>
+    <dl class="predim-cifras">
+     <div><dt>Potencia del conversor</dt><dd data-pd="pcs">≈ 500 kW</dd></div>
+     <div><dt>Energía útil</dt><dd data-pd="util">1 MWh</dd></div>
+     <div class="principal"><dt>Energía instalada sugerida</dt><dd data-pd="instalada">1,2 a 1,4 MWh</dd></div>
+     <div><dt>Equivale a</dt><dd data-pd="equipos">5 a 6 gabinetes de ≈ 250 kWh</dd></div>
+    </dl>
+    <figure class="predim-barra">
+     <div class="barra-partes" role="img" aria-label="De la energía instalada sugerida, cerca del 70 % es energía útil, cerca del 14 % cubre la ventana de uso y la eficiencia, y cerca del 17 % es reserva para sostenerla con los años.">
+      <span class="parte util"></span><span class="parte margen"></span><span class="parte reserva"></span>
+     </div>
+     <figcaption>
+      <ul>
+       <li><span class="llave util" aria-hidden="true"></span>Energía útil: la que necesitas entregar</li>
+       <li><span class="llave margen" aria-hidden="true"></span>Ventana de uso y eficiencia</li>
+       <li><span class="llave reserva" aria-hidden="true"></span>Reserva para sostenerla con los años</li>
+      </ul>
+     </figcaption>
+    </figure>
+    <p class="predim-aviso" id="pd-aviso" data-pd="aviso" role="status"></p>
+    <p class="oculto" role="status" data-pd="resumen"></p>
+    <button type="button" class="boton claro" data-pd-enviar>Enviar estos datos con mi consulta <span class="fl" aria-hidden="true">→</span></button>
+   </div>
 
-<section id="contacto" class="contacto">
- <div class="ancho contacto-grid">
-  <div>
-   <h2>Solicita tu diagnóstico</h2>
-   <p>Déjanos tus datos y cuándo vence tu contrato. Te escribimos con el alcance y el valor para agendar.</p>
-   <p class="alt">¿Prefieres el correo? Escríbenos a <!--email_off--><a href="mailto:contacto@solutionandbess.com?subject=Diagn%C3%B3stico%20de%20renovaci%C3%B3n">contacto@solutionandbess.com</a><!--/email_off-->.</p>
+   <p class="supuestos"><b>Supuestos a la vista.</b> Ventana de uso de 90&nbsp;% y eficiencia de descarga de 93&nbsp;%. El valor alto del rango suma 20&nbsp;%: permite seguir entregando la energía útil cuando la capacidad baje a cerca de 83&nbsp;%, sin ampliar el sistema. En cuántos años ocurre depende del equipo y de los ciclos por día. La potencia del conversor es potencia activa (kW); los kVA se definen en la ingeniería. Los equipos de referencia son de dos horas o más: en duraciones menores, la cantidad la fija la potencia. Los tamaños son de referencia: el modelo se define en la ingeniería. La estimación no calcula costos ni ahorros.</p>
   </div>
-  <form class="formulario" id="formulario" novalidate>
-   <div class="campos">
-    <label><span class="et">Nombre</span><input name="nombre" required minlength="2" maxlength="120" autocomplete="name"></label>
-    <label><span class="et">Empresa</span><input name="empresa" required minlength="2" maxlength="160" autocomplete="organization"></label>
-    <label><span class="et">Cargo <i>(opcional)</i></span><input name="cargo" maxlength="120" autocomplete="organization-title"></label>
-    <label><span class="et">Correo</span><input name="correo" type="email" required maxlength="200" autocomplete="email"></label>
-    <label><span class="et">Teléfono <i>(opcional)</i></span><input name="telefono" type="tel" maxlength="40" autocomplete="tel"></label>
-    <label><span class="et">¿Cuándo vence tu contrato?</span>
-     <select name="vencimiento" required>
-      <option value="" disabled selected>Elige una opción</option>
-      <option value="2026">2026</option>
-      <option value="2027">2027</option>
-      <option value="2028 o después">2028 o después</option>
-      <option value="No lo sé">No lo sé</option>
+ </div>
+</section>
+
+<!-- ================= 04 MÉTODO ================= -->
+<section class="seccion" id="metodo" aria-labelledby="t-metodo">
+ <div class="reticula cabecera">
+  <p class="num" aria-hidden="true">04</p>
+  <p class="etiqueta">Método</p>
+  <h2 class="tit" id="t-metodo">Del primer dato a la puesta en marcha</h2>
+  <p class="entrada">La etapa 1 es previa al contrato y termina con la propuesta. De la 2 a la 6 puedes contratar una o varias: cada una se cotiza por separado y cierra con entregables por escrito.</p>
+ </div>
+ <div class="reticula">
+  <ol class="etapas">
+   <li>
+    <h3><span class="n" aria-hidden="true">1</span>Revisión inicial</h3>
+    <p>Nos cuentas el proyecto y nos envías lo que tengas: consumos, ubicación, punto de conexión. Te decimos qué falta y cómo seguiría.</p>
+    <p class="entregable"><span>Resultado</span>Propuesta con alcance, entregables, plazos y precio, y lista de los datos que faltan</p>
+   </li>
+   <li>
+    <h3><span class="n" aria-hidden="true">2</span>Prefactibilidad y dimensionamiento</h3>
+    <p>Definimos qué tamaño y qué tipo de sistema tiene sentido, con sus supuestos.</p>
+    <p class="entregable"><span>Entregable</span>Memoria de dimensionamiento y alternativas comparadas</p>
+   </li>
+   <li>
+    <h3><span class="n" aria-hidden="true">3</span>Ingeniería conceptual y básica</h3>
+    <p>Arquitectura, diagrama unifilar, disposición de equipos y criterios de diseño.</p>
+    <p class="entregable"><span>Entregable</span>Planos, memorias y bases de diseño</p>
+   </li>
+   <li>
+    <h3><span class="n" aria-hidden="true">4</span>Estudios y conexión</h3>
+    <p>Los estudios eléctricos y la documentación que exige el operador o la distribuidora.</p>
+    <p class="entregable"><span>Entregable</span>Informes de estudio y expediente de conexión</p>
+   </li>
+   <li>
+    <h3><span class="n" aria-hidden="true">5</span>Especificación y compra</h3>
+    <p>Pliego técnico, consultas a fabricantes y comparación de ofertas en igualdad de condiciones.</p>
+    <p class="entregable"><span>Entregable</span>Especificación, matriz de comparación y recomendación</p>
+   </li>
+   <li>
+    <h3><span class="n" aria-hidden="true">6</span>Detalle, obra y puesta en marcha</h3>
+    <p>Ingeniería de detalle, apoyo en obra, pruebas de fábrica y de sitio, y habilitación.</p>
+    <p class="entregable"><span>Entregable</span>Planos para construir, protocolos y actas de prueba</p>
+   </li>
+  </ol>
+ </div>
+</section>
+
+<!-- ================= FRANJA ================= -->
+<figure class="franja">
+ <picture>
+  <source type="image/avif" srcset="/assets/franja-subestacion-800.avif 800w, /assets/franja-subestacion-1600.avif 1600w" sizes="100vw">
+  <source type="image/webp" srcset="/assets/franja-subestacion-800.webp 800w, /assets/franja-subestacion-1600.webp 1600w" sizes="100vw">
+  <img src="/assets/franja-subestacion-1600.webp" width="1600" height="640" alt="Vista aérea de una subestación eléctrica: pórticos, barras y transformadores." loading="lazy" decoding="async">
+ </picture>
+ <figcaption class="reticula">
+  <p class="franja-frase">El proyecto termina cuando se conecta. Diseñamos pensando en ese día.</p>
+  <p class="rotulo">Imagen de referencia</p>
+ </figcaption>
+</figure>
+
+<!-- ================= 05 ENTREGABLES ================= -->
+<section class="seccion fondo-suave" id="entregables" aria-labelledby="t-entregables">
+ <div class="reticula cabecera">
+  <p class="num" aria-hidden="true">05</p>
+  <p class="etiqueta">Entregables</p>
+  <h2 class="tit" id="t-entregables">Así se ve lo que entregamos</h2>
+  <p class="entrada">Cuatro ejemplos ilustrativos, con datos ficticios, del tipo de documento que recibes.</p>
+ </div>
+ <div class="reticula">
+  <ul class="laminas">
+
+   <li class="lamina">
+    <p class="lamina-cab"><span>SB-EJ-01</span><span>Rev. A</span></p>
+    <h3>Memoria de dimensionamiento</h3>
+    <dl class="lamina-datos">
+     <div><dt>Potencia</dt><dd>2000 kW</dd></div>
+     <div><dt>Duración</dt><dd>4 h</dd></div>
+     <div><dt>Energía útil requerida</dt><dd>8000 kWh</dd></div>
+     <div><dt>Ventana de uso · eficiencia de descarga</dt><dd>90 % · 93 %</dd></div>
+     <div><dt>Capacidad al año 10 (1 ciclo por día)</dt><dd>83 %</dd></div>
+     <div><dt>Energía instalada al inicio</dt><dd>11&#8239;500 kWh</dd></div>
+    </dl>
+    <svg class="lamina-graf" viewBox="0 0 270 150" role="img" aria-label="Gráfico ilustrativo: la energía útil disponible baja de unos 9600 kWh en el año 0 a 8000 kWh en el año 10, que es la energía requerida.">
+     <line x1="8" y1="24" x2="8" y2="118" stroke="#D7E0E4"/><line x1="8" y1="118" x2="262" y2="118" stroke="#D7E0E4"/>
+     <line x1="8" y1="92" x2="262" y2="92" stroke="#0A1F3A" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/>
+     <path d="M8 34 L33.4 44.4 L58.8 52 L84.2 58.6 L109.6 64.4 L135 69.8 L160.4 74.8 L185.8 79.6 L211.2 84 L236.6 88.2 L262 92" fill="none" stroke="#0A8FA3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+     <circle cx="8" cy="34" r="4" fill="#0A8FA3" stroke="#FFFFFF" stroke-width="2"/><circle cx="262" cy="92" r="4" fill="#0A8FA3" stroke="#FFFFFF" stroke-width="2"/>
+     <text x="18" y="27" class="g-t">Útil al año 0: 9600 kWh</text>
+     <text x="262" y="109" text-anchor="end" class="g-t">Requerida: 8000 kWh</text>
+     <text x="8" y="138" class="g-e">Año 0</text><text x="262" y="138" text-anchor="end" class="g-e">Año 10</text>
+    </svg>
+    <p class="lamina-pie">Ejemplo ilustrativo · Datos ficticios</p>
+   </li>
+
+   <li class="lamina">
+    <p class="lamina-cab"><span>SB-EJ-02</span><span>Rev. A</span></p>
+    <h3>Diagrama unifilar simplificado</h3>
+    <svg class="sld lamina-unifilar" viewBox="0 0 300 300" role="img" aria-label="Diagrama unifilar simplificado: punto de conexión, interruptor de media tensión, medición, transformador de media a baja tensión, interruptor de baja tensión y barra de baja tensión. De la barra salen las cargas, el conversor con las baterías y el inversor con el campo fotovoltaico.">
+     <g class="pot">
+      <circle cx="140" cy="14" r="8"/><circle class="oro" cx="140" cy="14" r="3.2"/>
+      <path d="M140 56V84M140 162V172M145.5 70H164M151 74.5l3 -9M155.5 74.5l3 -9"/>
+      <use href="#s-int" x="140" y="22"/>
+      <circle cx="140" cy="70" r="5.5"/>
+      <rect class="relleno" x="164" y="58" width="40" height="24"/>
+      <use href="#s-tr" x="140" y="84"/><use href="#s-int" x="140" y="128"/>
+      <path class="barra-bt" d="M30 172H270"/>
+      <path d="M60 172V214M52 205L60 214L68 205"/>
+      <path d="M140 172V182M140 222V232"/>
+      <use href="#s-inv-ca" x="140" y="202"/><use href="#s-bat" x="140" y="242"/>
+      <path d="M228 172V182M228 222V230"/>
+      <use href="#s-inv-ca" x="228" y="202"/><use href="#s-fv" x="228" y="253"/>
+     </g>
+     <g class="rot">
+      <text class="fuerte" x="156" y="18">PUNTO DE CONEXIÓN</text>
+      <text x="156" y="45">INTERRUPTOR MT</text>
+      <text x="184" y="74" text-anchor="middle">kWh</text>
+      <text x="156" y="110">TRANSFORMADOR MT/BT</text>
+      <text x="156" y="151">INTERRUPTOR BT</text>
+      <text class="fuerte" x="30" y="163">BARRA BT</text>
+      <text x="60" y="232" text-anchor="middle">CARGAS</text>
+      <text x="112" y="206" text-anchor="end">PCS</text>
+      <text x="140" y="270" text-anchor="middle">BATERÍAS</text>
+      <text x="230" y="290" text-anchor="middle">CAMPO FV</text>
+     </g>
+    </svg>
+    <p class="lamina-pie">Ejemplo ilustrativo · Esquema sin escala</p>
+   </li>
+
+   <li class="lamina">
+    <p class="lamina-cab"><span>SB-EJ-03</span><span>Rev. A</span></p>
+    <h3>Matriz de comparación de ofertas</h3>
+    <div class="lamina-tabla">
+     <table>
+      <thead><tr><th scope="col">Oferta</th><th scope="col"><abbr title="Oferta A">A</abbr></th><th scope="col"><abbr title="Oferta B">B</abbr></th><th scope="col"><abbr title="Oferta C">C</abbr></th></tr></thead>
+      <tbody>
+       <tr><th scope="row">Energía instalada (MWh)</th><td>11,5</td><td>11,2</td><td>12,0</td></tr>
+       <tr><th scope="row">Garantía de capacidad al año 10</th><td>83 %</td><td>83 %</td><td>78 %</td></tr>
+       <tr><th scope="row">Energía útil al año 10 (MWh)</th><td>8,0</td><td>7,8</td><td>7,8</td></tr>
+       <tr><th scope="row">Eficiencia de ida y vuelta (CA)</th><td>86 %</td><td>88 %</td><td>85 %</td></tr>
+       <tr><th scope="row">Plazo de entrega (semanas)</th><td>24</td><td>30</td><td>20</td></tr>
+       <tr><th scope="row">Servicio técnico en el país</th><td>Sí</td><td>Sí</td><td>No</td></tr>
+      </tbody>
+     </table>
+    </div>
+    <p class="lamina-pie">Ejemplo ilustrativo · Ofertas y datos ficticios</p>
+   </li>
+
+   <li class="lamina">
+    <p class="lamina-cab"><span>SB-EJ-04</span><span>Rev. A</span></p>
+    <h3>Índice de un informe de prefactibilidad</h3>
+    <ol class="lamina-indice">
+     <li><span>Antecedentes y datos recibidos</span><span aria-hidden="true">3</span></li>
+     <li><span>Perfil de demanda</span><span aria-hidden="true">5</span></li>
+     <li><span>Alternativas</span><span aria-hidden="true">8</span></li>
+     <li><span>Dimensionamiento</span><span aria-hidden="true">11</span></li>
+     <li><span>Conexión</span><span aria-hidden="true">15</span></li>
+     <li><span>Riesgos y supuestos</span><span aria-hidden="true">18</span></li>
+     <li><span>Próximos pasos</span><span aria-hidden="true">20</span></li>
+    </ol>
+    <p class="lamina-pie">Ejemplo ilustrativo · La extensión depende del proyecto</p>
+   </li>
+
+  </ul>
+  <p class="cta-linea">¿Necesitas un entregable así? <a class="enlace" href="#contacto">Cuéntanos tu proyecto <span aria-hidden="true">→</span></a></p>
+ </div>
+</section>
+
+<!-- ================= 06 TECNOLOGÍA ================= -->
+<section class="seccion" id="tecnologia" aria-labelledby="t-tecnologia">
+ <div class="reticula cabecera">
+  <p class="num" aria-hidden="true">06</p>
+  <p class="etiqueta">Tecnología</p>
+  <h2 class="tit" id="t-tecnologia">Equipos de varios fabricantes, elegidos según el proyecto</h2>
+  <p class="entrada">La química, la duración, el tipo de conversor, las garantías y el servicio técnico en tu país pesan distinto en cada caso. Por eso no partimos de un catálogo.</p>
+ </div>
+ <div class="reticula">
+  <figure class="plano">
+   <!-- Unifilar de escritorio -->
+   <svg class="sld sld-e" viewBox="520 10 710 670" role="img" aria-labelledby="sld-e-t sld-e-d">
+    <title id="sld-e-t">Ilustración esquemática: diagrama unifilar de una planta híbrida solar con baterías</title>
+    <desc id="sld-e-d">Dos campos fotovoltaicos, cada uno con su seccionador de corriente continua y su inversor, se unen en baja tensión y pasan por un transformador y un interruptor hasta la barra de media tensión. Dos contenedores de baterías se unen en corriente continua, pasan por el conversor (PCS), un transformador y un interruptor, y llegan a la misma barra. Desde la barra, un interruptor de media tensión, un transformador de media a alta tensión, un interruptor de alta tensión, la medición y un seccionador llevan al punto de conexión a la red. Un sistema de control (EMS) coordina inversores, conversor y medición.</desc>
+    <g class="zona"><rect x="656" y="40" width="234" height="164" rx="2"/><rect x="972" y="40" width="216" height="164" rx="2"/></g>
+    <g class="guia"><path d="M644 121H706M614 172H698M681 258H768M644 303H768"/></g>
+    <g class="rot">
+     <text class="grupo" x="656" y="30">CAMPO FOTOVOLTAICO</text>
+     <text class="grupo" x="972" y="30">CONTENEDORES DE BATERÍAS</text>
+     <text x="532" y="125">SECCIONADOR CC</text>
+     <text x="532" y="176">INVERSORES</text>
+     <text x="532" y="262">TRANSFORMADOR BT/MT</text>
+     <text x="532" y="307">INTERRUPTOR MT</text>
+     <text class="fuerte" x="532" y="360">BARRA DE MEDIA TENSIÓN</text>
+     <text x="1038" y="176" text-anchor="end">PCS</text>
+     <text x="952" y="387">INTERRUPTOR MT</text>
+     <text x="952" y="481">INTERRUPTOR AT</text>
+     <text x="952" y="436">TRANSFORMADOR MT/AT</text>
+     <text x="916" y="520" text-anchor="end">MEDICIÓN</text>
+     <text x="952" y="561">SECCIONADOR</text>
+     <text class="fuerte" x="912" y="603" text-anchor="end">PUNTO DE CONEXIÓN</text>
+     <text x="912" y="620" text-anchor="end">A LA RED</text>
+    </g>
+    <g class="senal">
+     <rect class="relleno" x="1098" y="499" width="120" height="34" rx="2"/>
+     <path d="M996 516H1098M1196 499V218H754V172H744M874 218V172H864M1110 218V172H1100"/>
+     <text class="grupo" x="1158" y="520" text-anchor="middle">EMS · CONTROL</text>
+    </g>
+    <g class="pot">
+     <path class="fino" d="M668 54L680 66M675.5 65.5L680 66L679.5 61.5M676 44L688 56M683.5 55.5L688 56L687.5 51.5M788 54L800 66M795.5 65.5L800 66L799.5 61.5M796 44L808 56M803.5 55.5L808 56L807.5 51.5"/>
+     <use href="#s-fv" x="724" y="78"/><use href="#s-fv" x="844" y="78"/>
+     <path d="M724 96V104M724 138V152M724 192V232M844 96V104M844 138V152M844 192V232M784 232V236M784 280V286M784 320V356"/>
+     <use href="#s-sec" x="724" y="104"/><use href="#s-sec" x="844" y="104"/>
+     <use href="#s-inv" x="724" y="172"/><use href="#s-inv" x="844" y="172"/>
+     <path class="barra-bt" d="M712 232H856"/>
+     <use href="#s-tr" x="784" y="236"/><use href="#s-int" x="784" y="286"/>
+     <rect class="cont" x="988" y="50" width="64" height="54" rx="3"/><rect class="cont" x="1108" y="50" width="64" height="54" rx="3"/>
+     <path class="cont" d="M988 57H1052M1108 57H1172"/>
+     <use href="#s-bat" x="1020" y="79"/><use href="#s-bat" x="1140" y="79"/>
+     <path d="M1020 89V104M1020 138V144M1140 89V104M1140 138V144M1080 144V152M1080 192V236M1080 280V286M1080 320V356"/>
+     <use href="#s-sec" x="1020" y="104"/><use href="#s-sec" x="1140" y="104"/>
+     <path class="barra-bt" d="M1008 144H1152"/>
+     <use href="#s-inv" x="1080" y="172"/>
+     <path class="fino" d="M1049 163V181M1045.5 167.5L1049 162.5L1052.5 167.5M1045.5 176.5L1049 181.5L1052.5 176.5"/>
+     <use href="#s-tr" x="1080" y="236"/><use href="#s-int" x="1080" y="286"/>
+     <path class="barra-mt" d="M716 356H1170"/>
+     <path d="M932 356V366M932 400V410M932 454V460M932 494V540M932 574V598M937.5 516H956M943 520.5l3 -9M947.5 520.5l3 -9"/>
+     <use href="#s-int" x="932" y="366"/><use href="#s-tr" x="932" y="410"/><use href="#s-int" x="932" y="460"/>
+     <circle cx="932" cy="516" r="5.5"/>
+     <rect class="relleno" x="956" y="504" width="40" height="24"/><text x="976" y="520" text-anchor="middle">kWh</text>
+     <use href="#s-sec" x="932" y="540"/>
+     <circle cx="932" cy="606" r="8"/><circle class="oro" cx="932" cy="606" r="3.2"/>
+     <path d="M932 614V660M924.5 651L932 660L939.5 651"/>
+    </g>
+    <g class="leyenda">
+     <path d="M560 448H592"/><text x="604" y="452">POTENCIA</text>
+     <path class="senal-l" d="M560 470H592"/><text x="604" y="474">CONTROL Y MEDICIÓN</text>
+     <g class="ley-flujo"><path d="M560 492H592"/><path class="oro-l" d="M570 492H582"/><text x="604" y="496">FLUJO DE ENERGÍA</text></g>
+    </g>
+    <g class="cajetin">
+     <rect class="relleno" x="1000" y="606" width="218" height="58"/><path d="M1000 638H1218M1124 638V664"/>
+     <text class="fuerte" x="1010" y="627">ILUSTRACIÓN ESQUEMÁTICA</text>
+     <text x="1010" y="655">PLANTA HÍBRIDA</text><text x="1134" y="655">SIN ESCALA</text>
+    </g>
+    <g aria-hidden="true">
+     <path class="pulso" d="M724 97V232H784V356H932V658"/>
+     <path class="pulso p2" d="M844 97V232H784"/>
+     <path class="pulso p3" d="M1020 90V144H1080V356H932"/>
+     <path class="pulso p4" d="M1140 90V144H1080"/>
+    </g>
+   </svg>
+
+   <!-- Unifilar de celular -->
+   <svg class="sld sld-m" viewBox="0 0 358 574" role="img" aria-label="Ilustración esquemática: diagrama unifilar de una planta híbrida. Un campo fotovoltaico con su inversor y dos contenedores de baterías con su conversor (PCS) llegan, cada uno por su transformador e interruptor, a la barra de media tensión. Desde la barra, un interruptor de media tensión, un transformador, un interruptor de alta tensión, la medición y un seccionador llevan al punto de conexión a la red.">
+    <g class="zona"><rect x="10" y="24" width="198" height="156" rx="2"/><rect x="216" y="24" width="126" height="156" rx="2"/></g>
+    <g class="guia"><path d="M80 208H116M227 208H263M74 253H123M220 253H266"/></g>
+    <g class="pot">
+     <path class="fino" d="M14 48L22 56M17.5 55.5L22 56L21.5 51.5M19 38L27 46M22.5 45.5L27 46L26.5 41.5"/>
+     <use href="#s-fv" x="64" y="58"/>
+     <path d="M64 76V84M64 118V128M64 168V186M64 230V236M64 270V298"/>
+     <use href="#s-sec" x="64" y="84"/><use href="#s-inv" x="64" y="148"/><use href="#s-tr" x="64" y="186"/><use href="#s-int" x="64" y="236"/>
+     <rect class="cont" x="226" y="34" width="48" height="48" rx="3"/><rect class="cont" x="284" y="34" width="48" height="48" rx="3"/>
+     <path class="cont" d="M226 41H274M284 41H332"/>
+     <use href="#s-bat" x="250" y="60"/><use href="#s-bat" x="308" y="60"/>
+     <path d="M250 70V82M308 70V82M250 116V120M308 116V120M279 120V128M279 168V186M279 230V236M279 270V298"/>
+     <use href="#s-sec" x="250" y="82"/><use href="#s-sec" x="308" y="82"/>
+     <path class="barra-bt" d="M240 120H318"/>
+     <use href="#s-inv" x="279" y="148"/><use href="#s-tr" x="279" y="186"/><use href="#s-int" x="279" y="236"/>
+     <path class="barra-mt" d="M24 298H334"/>
+     <path d="M179 298V308M179 342V350M179 394V400M179 434V472M179 506V522M184.5 452H201M190 456.5l3 -9M194.5 456.5l3 -9"/>
+     <use href="#s-int" x="179" y="308"/><use href="#s-tr" x="179" y="350"/><use href="#s-int" x="179" y="400"/>
+     <circle cx="179" cy="452" r="5.5"/>
+     <rect class="relleno" x="201" y="440" width="40" height="24"/>
+     <use href="#s-sec" x="179" y="472"/>
+     <circle cx="179" cy="530" r="8"/><circle class="oro" cx="179" cy="530" r="3.2"/>
+     <path d="M179 538V566M171.5 557L179 566L186.5 557"/>
+    </g>
+    <g class="rot">
+     <text class="grupo" x="10" y="15">CAMPO FV</text>
+     <text class="grupo" x="216" y="15">BATERÍAS</text>
+     <text x="94" y="105">SECCIONADOR CC</text>
+     <text x="94" y="152">INVERSOR</text>
+     <text x="251" y="152" text-anchor="end">PCS</text>
+     <text x="171.5" y="212" text-anchor="middle">TRANSFORMADOR</text>
+     <text x="171.5" y="257" text-anchor="middle">INTERRUPTOR</text>
+     <text class="fuerte" x="171.5" y="285" text-anchor="middle">BARRA DE MEDIA TENSIÓN</text>
+     <text x="199" y="329">INTERRUPTOR MT</text>
+     <text x="199" y="421">INTERRUPTOR AT</text>
+     <text x="199" y="376">TRANSFORMADOR MT/AT</text>
+     <text x="221" y="456" text-anchor="middle">kWh</text>
+     <text x="249" y="456">MEDICIÓN</text>
+     <text x="199" y="493">SECCIONADOR</text>
+     <text class="fuerte" x="199" y="534">PUNTO DE CONEXIÓN</text>
+    </g>
+    <g class="cajetin">
+     <rect class="relleno" x="24" y="384" width="128" height="72"/><path d="M24 431H152"/>
+     <text class="fuerte" x="33" y="404">ILUSTRACIÓN</text><text class="fuerte" x="33" y="420">ESQUEMÁTICA</text>
+     <text x="33" y="448">SIN ESCALA</text>
+    </g>
+    <g aria-hidden="true">
+     <path class="pulso" d="M64 77V298H179V564"/>
+     <path class="pulso p3" d="M250 71V120H279V298H179"/>
+     <path class="pulso p4" d="M308 71V120H279"/>
+    </g>
+   </svg>
+
+   <figcaption>
+    <h3>Dónde entra cada equipo</h3>
+    <dl>
+     <div><dt>Generación</dt><dd>Módulos fotovoltaicos e inversores.</dd></div>
+     <div><dt>Almacenamiento</dt><dd>Celdas, módulos y contenedores de baterías, con su sistema de gestión (BMS).</dd></div>
+     <div><dt>Conversión</dt><dd>El conversor (PCS) une la corriente continua de las baterías con la alterna de la red.</dd></div>
+     <div><dt>Transformación y maniobra</dt><dd>Transformadores, interruptores, seccionadores y protecciones.</dd></div>
+     <div><dt>Control y medición</dt><dd>El sistema de gestión de energía (EMS) coordina todo y responde a lo que pide el operador.</dd></div>
+    </dl>
+    <p class="plano-accion"><button type="button" class="viz-ver-datos" data-flujo hidden>Animar el flujo de energía</button></p>
+    <p class="nota">Ilustración esquemática de una planta híbrida, sin escala. Cada proyecto tiene su propio unifilar.</p>
+   </figcaption>
+  </figure>
+
+  <div class="tabla-fab">
+   <table role="table">
+    <caption class="oculto">Fabricantes de los equipos con los que trabajamos</caption>
+    <thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Fabricante</th><th scope="col" role="columnheader">Qué fabrica</th></tr></thead>
+    <tbody role="rowgroup">
+     <tr role="row"><th scope="row" role="rowheader">HiTHIUM</th><td role="cell">Celdas, módulos y sistemas BESS para escala de red, comercial-industrial y residencial.</td></tr>
+     <tr role="row"><th scope="row" role="rowheader">Jinko ESS</th><td role="cell">Filial de almacenamiento de JinkoSolar: sistemas BESS de gran escala y comercial-industriales.</td></tr>
+     <tr role="row"><th scope="row" role="rowheader">CORNEX</th><td role="cell">Celdas de batería y contenedores de baterías para almacenamiento de energía.</td></tr>
+     <tr role="row"><th scope="row" role="rowheader">Kehua</th><td role="cell">Electrónica de potencia: conversores (PCS), inversores fotovoltaicos y sistemas de almacenamiento.</td></tr>
+     <tr role="row"><th scope="row" role="rowheader">SOFAR</th><td role="cell">Inversores fotovoltaicos e híbridos, conversores (PCS) y sistemas de almacenamiento en baterías.</td></tr>
+    </tbody>
+   </table>
+   <p class="nota">Los cinco fabricantes tienen su sede en China. Los mencionamos para indicar con qué equipos trabajamos. Son marcas de sus respectivos titulares; su mención no implica representación, distribución ni respaldo.</p>
+  </div>
+
+  <section class="normas" aria-labelledby="t-normas">
+   <h3 id="t-normas">Normas que usamos como referencia</h3>
+   <p class="normas-entrada">Las aplicamos según el país y el tipo de proyecto. Son marcos de diseño, no certificaciones de nuestra firma.</p>
+   <dl>
+    <div><dt>Seguridad de baterías y sistemas</dt><dd>IEC 62933-5-2 · IEC 62619 · IEC 63056 · UL 9540 · UL 9540A · UL 1973 · NFPA 855</dd></div>
+    <div><dt>Conexión a la red</dt><dd>IEEE 1547 · IEEE 2800 · IEC TS 62786-1 · norma técnica de cada país</dd></div>
+    <div><dt>Plantas fotovoltaicas</dt><dd>IEC 62548-1 · IEC 62446-1 · IEC 61724-1 · IEC 62109</dd></div>
+    <div><dt>Conversión de potencia</dt><dd>IEC 62477-1</dd></div>
+    <div><dt>Comunicaciones y control</dt><dd>IEC 61850 · IEC 60870-5-104</dd></div>
+   </dl>
+  </section>
+ </div>
+</section>
+
+<!-- ================= 07 LATINOAMÉRICA ================= -->
+<section class="seccion fondo-azul" id="latinoamerica" aria-labelledby="t-latam">
+ <div class="reticula cabecera">
+  <p class="num" aria-hidden="true">07</p>
+  <p class="etiqueta">Latinoamérica</p>
+  <h2 class="tit" id="t-latam">Un proyecto, las reglas de cada país</h2>
+  <p class="entrada">El almacenamiento se regula distinto en cada mercado. En cada encargo empezamos por la norma técnica, los requisitos del operador y el vocabulario de tu país. Trabajamos desde Chile, en remoto, y viajamos al sitio cuando el proyecto lo pide.</p>
+ </div>
+ <div class="reticula">
+  <div class="latam" data-latam data-inicial="cl">
+
+   <div class="latam-mapa">
+    <p class="rotulo">Esquema: países que atendemos</p>
+    <ul class="mapa-clave">
+     <li><span class="marca-base" aria-hidden="true"></span>Chile, nuestra base</li>
+     <li><span class="marca-pend" aria-hidden="true"></span>Marco regulatorio por revisar</li>
+    </ul>
+    <p class="mapa-ayuda">Elige un país para ver su regulación y cómo se llama allí cada actor.</p>
+    <label class="latam-lista"><span>País</span>
+     <select data-latam-lista>
+      <option value="ar">Argentina</option><option value="bo">Bolivia</option><option value="br">Brasil</option><option value="cl" selected>Chile</option><option value="co">Colombia</option><option value="cr">Costa Rica</option><option value="ec">Ecuador</option><option value="sv">El Salvador</option><option value="gt">Guatemala</option><option value="hn">Honduras</option><option value="mx">México</option><option value="ni">Nicaragua</option><option value="pa">Panamá</option><option value="py">Paraguay</option><option value="pe">Perú</option><option value="pr">Puerto Rico</option><option value="do">República Dominicana</option><option value="uy">Uruguay</option><option value="ve">Venezuela</option>
      </select>
     </label>
-    <label class="ancho2"><span class="et">Mensaje <i>(opcional)</i></span><textarea name="mensaje" rows="3" maxlength="2000"></textarea></label>
-    <div class="trampa" aria-hidden="true"><label for="zx_control">Deja este campo vacío</label><input id="zx_control" name="zx_control" type="text" tabindex="-1" autocomplete="off" data-1p-ignore data-lpignore="true" data-form-type="other"></div>
+    <div class="mapa">
+     <a class="pais" href="#pais-mx" data-pais="mx" aria-label="México (MX)"><abbr title="México">MX</abbr></a>
+     <a class="pais" href="#pais-do" data-pais="do" aria-label="República Dominicana (DO)"><abbr title="República Dominicana">DO</abbr></a>
+     <a class="pais" href="#pais-pr" data-pais="pr" aria-label="Puerto Rico (PR)"><abbr title="Puerto Rico">PR</abbr></a>
+     <a class="pais" href="#pais-gt" data-pais="gt" aria-label="Guatemala (GT)"><abbr title="Guatemala">GT</abbr></a>
+     <a class="pais" href="#pais-hn" data-pais="hn" aria-label="Honduras (HN)"><abbr title="Honduras">HN</abbr></a>
+     <a class="pais" href="#pais-sv" data-pais="sv" aria-label="El Salvador (SV)"><abbr title="El Salvador">SV</abbr></a>
+     <a class="pais" href="#pais-ni" data-pais="ni" aria-label="Nicaragua (NI)"><abbr title="Nicaragua">NI</abbr></a>
+     <a class="pais" href="#pais-cr" data-pais="cr" aria-label="Costa Rica (CR)"><abbr title="Costa Rica">CR</abbr></a>
+     <a class="pais" href="#pais-pa" data-pais="pa" aria-label="Panamá (PA)"><abbr title="Panamá">PA</abbr></a>
+     <a class="pais" href="#pais-ve" data-pais="ve" aria-label="Venezuela (VE)"><abbr title="Venezuela">VE</abbr></a>
+     <a class="pais" href="#pais-co" data-pais="co" aria-label="Colombia (CO)"><abbr title="Colombia">CO</abbr></a>
+     <a class="pais" href="#pais-ec" data-pais="ec" aria-label="Ecuador (EC)"><abbr title="Ecuador">EC</abbr></a>
+     <a class="pais" href="#pais-br" data-pais="br" aria-label="Brasil (BR)"><abbr title="Brasil">BR</abbr></a>
+     <a class="pais" href="#pais-pe" data-pais="pe" aria-label="Perú (PE)"><abbr title="Perú">PE</abbr></a>
+     <a class="pais" href="#pais-bo" data-pais="bo" aria-label="Bolivia (BO)"><abbr title="Bolivia">BO</abbr></a>
+     <a class="pais es-base" href="#pais-cl" data-pais="cl" aria-label="Chile (CL), nuestra base"><abbr title="Chile">CL</abbr></a>
+     <a class="pais" href="#pais-py" data-pais="py" aria-label="Paraguay (PY)"><abbr title="Paraguay">PY</abbr></a>
+     <a class="pais" href="#pais-ar" data-pais="ar" aria-label="Argentina (AR)"><abbr title="Argentina">AR</abbr></a>
+     <a class="pais" href="#pais-uy" data-pais="uy" aria-label="Uruguay (UY)"><abbr title="Uruguay">UY</abbr></a>
+    </div>
    </div>
-   <label class="acepto"><input type="checkbox" name="acepta_privacidad" required><span>Acepto que usen estos datos para responder mi solicitud, según la <a href="/privacidad">política de privacidad</a>.</span></label>
-   <button class="boton claro ancho-total" type="submit">Enviar solicitud <span aria-hidden="true">→</span></button>
-   <p class="estado" id="estado" role="status" aria-live="polite"></p>
-  </form>
+
+   <div class="fichas">
+
+    <article class="ficha" id="pais-cl" data-pais="cl">
+     <h3><span class="iso2" aria-hidden="true">CL</span>Chile</h3>
+     <p class="dato-de">Dato del mercado</p>
+     <p class="dato"><strong>3672&nbsp;MW</strong> (17&#8239;202&nbsp;MWh) de baterías en operación a octubre de 2026, y otros 4837&nbsp;MW en construcción.</p>
+     <p class="fuente">Fuente: <a href="https://cdn.acera.cl/wp-content/uploads/2026/11/2026-10-Boletin-Estadisticas-ACERA.pdf" target="_blank" rel="noopener">ACERA, boletín de estadísticas, octubre de 2026</a></p>
+     <dl class="vocab">
+      <div><dt>Quien contrata su energía libremente</dt><dd>Cliente libre</dd></div>
+      <div><dt>Operador del sistema</dt><dd>Coordinador Eléctrico Nacional</dd></div>
+      <div><dt>Regulador</dt><dd>Comisión Nacional de Energía (CNE)</dd></div>
+      <div><dt>Norma de conexión</dt><dd>Norma Técnica de Seguridad y Calidad de Servicio (NTSyCS)</dd></div>
+     </dl>
+    </article>
+
+    <article class="ficha" id="pais-ar" data-pais="ar">
+     <h3><span class="iso2" aria-hidden="true">AR</span>Argentina</h3>
+     <p class="dato-de">Dato del mercado</p>
+     <p class="dato"><strong class="frase">Dos licitaciones</strong> adjudicaron almacenamiento en baterías: AlmaGBA (713&nbsp;MW, 2025) y AlmaSADI (700,5&nbsp;MW, julio de 2026).</p>
+     <p class="fuente">Fuentes: <a href="https://www.boletinoficial.gob.ar/detalleAviso/primera/344103/20260707" target="_blank" rel="noopener">Boletín Oficial, Resolución SE 155/2026</a> y <a href="https://www.pv-magazine-latam.com/2026/07/08/argentina-adjudica-7005-mw-de-almacenamiento-en-baterias-en-nodos-criticos-del-sadi/" target="_blank" rel="noopener">pv magazine Latinoamérica, 8 de julio de 2026</a></p>
+     <dl class="vocab">
+      <div><dt>Quien contrata su energía libremente</dt><dd>Gran usuario (GUMA, GUME, GUDI)</dd></div>
+      <div><dt>Operador del sistema</dt><dd>CAMMESA</dd></div>
+      <div><dt>Regulador</dt><dd>Ente Nacional Regulador del Gas y la Electricidad</dd></div>
+      <div><dt>Norma de conexión</dt><dd>Los Procedimientos (Res. ex-SEE 61/1992), que administra CAMMESA</dd></div>
+     </dl>
+    </article>
+
+    <article class="ficha" id="pais-br" data-pais="br">
+     <h3><span class="iso2" aria-hidden="true">BR</span>Brasil</h3>
+     <p class="dato-de">Dato del mercado</p>
+     <p class="dato"><strong class="frase">Ley 15.269</strong> de 2025: sumó el almacenamiento a las competencias de ANEEL. Desde el 25 de noviembre de 2027, los consumidores industriales y comerciales de baja tensión podrán elegir a su proveedor; el resto, desde noviembre de 2028.</p>
+     <p class="fuente">Fuentes: <a href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15269.htm" target="_blank" rel="noopener" lang="pt">Presidência da República, Lei 15.269/2025</a> y <a href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/D13097.htm" target="_blank" rel="noopener">Decreto 13.097/2026</a></p>
+     <dl class="vocab">
+      <div><dt>Quien contrata su energía libremente</dt><dd lang="pt">Consumidor livre</dd></div>
+      <div><dt>Operador del sistema</dt><dd>ONS</dd></div>
+      <div><dt>Regulador</dt><dd>ANEEL</dd></div>
+      <div><dt>Norma de conexión</dt><dd><span lang="pt">Procedimentos de Rede</span> (ONS) y PRODIST (ANEEL)</dd></div>
+     </dl>
+    </article>
+
+    <article class="ficha" id="pais-mx" data-pais="mx">
+     <h3><span class="iso2" aria-hidden="true">MX</span>México</h3>
+     <p class="dato-de">Dato del mercado</p>
+     <p class="dato"><strong class="frase">Cinco modalidades</strong> para integrar almacenamiento: desde abril de 2026 rigen nuevas disposiciones, con potencia acreditable a partir de tres horas de duración.</p>
+     <p class="fuente">Fuente: <a href="https://dof.gob.mx/nota_detalle.php?codigo=5785045&amp;fecha=16/04/2026" target="_blank" rel="noopener">Diario Oficial de la Federación, 16 de abril de 2026</a></p>
+     <dl class="vocab">
+      <div><dt>Quien contrata su energía libremente</dt><dd>Usuario calificado</dd></div>
+      <div><dt>Operador del sistema</dt><dd>CENACE</dd></div>
+      <div><dt>Regulador</dt><dd>Comisión Nacional de Energía (CNE)</dd></div>
+     </dl>
+    </article>
+
+    <article class="ficha" id="pais-co" data-pais="co">
+     <h3><span class="iso2" aria-hidden="true">CO</span>Colombia</h3>
+     <p class="dato-de">Dato del mercado</p>
+     <p class="dato"><strong class="frase">CREG 101&nbsp;113</strong> de junio de 2026: la resolución define cómo se incorporan las baterías al sistema interconectado.</p>
+     <p class="fuente">Fuente: <a href="https://gestornormativo.creg.gov.co/gestor/entorno/docs/resolucion_creg_101-113_2026.htm" target="_blank" rel="noopener">CREG, Resolución 101 113 de 2026</a></p>
+     <dl class="vocab">
+      <div><dt>Quien contrata su energía libremente</dt><dd>Usuario no regulado</dd></div>
+      <div><dt>Operador del sistema</dt><dd>XM</dd></div>
+      <div><dt>Regulador</dt><dd>CREG</dd></div>
+      <div><dt>Cómo llama la norma a las baterías</dt><dd>SAEB (sistemas de almacenamiento de energía eléctrica con baterías)</dd></div>
+      <div><dt>Norma de conexión</dt><dd>Código de Redes (CREG 025 de 1995) y CREG 060 de 2019</dd></div>
+     </dl>
+    </article>
+
+    <article class="ficha" id="pais-pe" data-pais="pe">
+     <h3><span class="iso2" aria-hidden="true">PE</span>Perú</h3>
+     <p class="dato-de">Dato del mercado</p>
+     <p class="dato"><strong class="frase">Aún en proyecto:</strong> en abril de 2026 el ministerio publicó el proyecto de reglamento de servicios complementarios, que abre su prestación a las baterías.</p>
+     <p class="fuente">Fuentes: <a href="https://www.gob.pe/institucion/minem/normas-legales/8033014-171-2026-minem-dm" target="_blank" rel="noopener">MINEM, Resolución Ministerial 171-2026</a> y <a href="https://www.pv-magazine-latam.com/2026/04/21/el-ministerio-de-energia-y-minas-de-peru-publica-proyecto-de-reglamento-para-impulsar-las-energias-renovables/" target="_blank" rel="noopener">pv magazine Latinoamérica, 21 de abril de 2026</a></p>
+     <dl class="vocab">
+      <div><dt>Quien contrata su energía libremente</dt><dd>Usuario libre</dd></div>
+      <div><dt>Operador del sistema</dt><dd>COES</dd></div>
+      <div><dt>Regulador</dt><dd>Osinergmin</dd></div>
+      <div><dt>Norma de conexión</dt><dd>PR-20 del COES</dd></div>
+     </dl>
+    </article>
+
+    <article class="ficha" id="pais-do" data-pais="do">
+     <h3><span class="iso2" aria-hidden="true">DO</span>República Dominicana</h3>
+     <p class="dato-de">Dato del mercado</p>
+     <p class="dato"><strong class="frase">Hasta 900&nbsp;MW</strong> solares y eólicos con baterías de al menos cuatro horas: la aprobación de las bases de la licitación se informó en noviembre de 2026.</p>
+     <p class="fuente">Fuente: <a href="https://www.pv-magazine-latam.com/2026/11/24/republica-dominicana-aprueba-las-bases-para-licitar-hasta-900-mw-solares-y-eolicos-con-almacenamiento/" target="_blank" rel="noopener">pv magazine Latinoamérica, 24 de noviembre de 2026</a></p>
+     <dl class="vocab">
+      <div><dt>Quien contrata su energía libremente</dt><dd>Usuario no regulado</dd></div>
+      <div><dt>Operador del sistema</dt><dd>Organismo Coordinador</dd></div>
+      <div><dt>Regulador</dt><dd>Superintendencia de Electricidad (SIE)</dd></div>
+      <div><dt>Norma de conexión</dt><dd>Código de Conexión del SENI (SIE)</dd></div>
+     </dl>
+    </article>
+
+    <article class="ficha" id="pais-pa" data-pais="pa">
+     <h3><span class="iso2" aria-hidden="true">PA</span>Panamá</h3>
+     <p class="dato-de">Dato del mercado</p>
+     <p class="dato"><strong class="frase">Dos licitaciones</strong> de potencia y energía para 2027, con participación de baterías, anunció el gobierno en julio de 2026.</p>
+     <p class="fuente">Fuente: <a href="https://www.energia.gob.pa/comunicado-de-prensa-panama-anuncia-dos-nuevas-licitaciones-de-energia-para-2027-y-abre-la-puerta-al-almacenamiento-con-baterias/" target="_blank" rel="noopener">Secretaría Nacional de Energía, 14 de julio de 2026</a></p>
+     <dl class="vocab">
+      <div><dt>Quien contrata su energía libremente</dt><dd>Gran cliente</dd></div>
+      <div><dt>Operador del sistema</dt><dd>Centro Nacional de Despacho (ETESA)</dd></div>
+      <div><dt>Regulador</dt><dd>ASEP</dd></div>
+     </dl>
+    </article>
+
+    <article class="ficha" id="pais-gt" data-pais="gt">
+     <h3><span class="iso2" aria-hidden="true">GT</span>Guatemala</h3>
+     <p class="dato-de">Dato del mercado</p>
+     <p class="dato"><strong class="frase">Hasta 1400&nbsp;MW</strong> de potencia firme pidió la licitación PEG-5, con contratos de hasta 15 años. Entre las ofertas de febrero de 2026 hubo proyectos solares con almacenamiento.</p>
+     <p class="fuente">Fuente: <a href="https://www.pv-magazine-latam.com/2026/02/16/la-licitacion-de-energia-electrica-peg-5-de-guatemala-atrae-51-empresas-que-triplican-la-oferta-de-capacidad-solicitada/" target="_blank" rel="noopener">pv magazine Latinoamérica, 16 de febrero de 2026</a></p>
+     <dl class="vocab">
+      <div><dt>Quien contrata su energía libremente</dt><dd>Gran usuario</dd></div>
+      <div><dt>Operador del sistema</dt><dd>Administrador del Mercado Mayorista (AMM)</dd></div>
+      <div><dt>Regulador</dt><dd>CNEE</dd></div>
+     </dl>
+    </article>
+
+    <article class="ficha" id="pais-uy" data-pais="uy">
+     <h3><span class="iso2" aria-hidden="true">UY</span>Uruguay</h3>
+     <p class="dato-de">Dato del mercado</p>
+     <p class="dato"><strong class="frase">Licitación solar:</strong> en noviembre de 2026 UTE llamó a ofertas para comprar energía fotovoltaica a privados. Se reciben hasta el 27 de enero de 2027.</p>
+     <p class="fuente">Fuente: <a href="https://www.comprasestatales.gub.uy/consultas/detalle/mostrar-llamado/1/id/1382756" target="_blank" rel="noopener">Compras Estatales, Licitación Pública 104220/2026</a></p>
+     <dl class="vocab">
+      <div><dt>Quien contrata su energía libremente</dt><dd>Gran consumidor</dd></div>
+      <div><dt>Operador del sistema</dt><dd>ADME</dd></div>
+      <div><dt>Regulador</dt><dd>URSEA</dd></div>
+     </dl>
+    </article>
+
+    <article class="ficha" id="pais-py" data-pais="py">
+     <h3><span class="iso2" aria-hidden="true">PY</span>Paraguay</h3>
+     <p class="dato-de">Dato del mercado</p>
+     <p class="dato"><strong class="frase">Hasta 30 años</strong> pueden durar los contratos de energía renovable no hidráulica que la ANDE puede licitar, con o sin almacenamiento, según la Ley 7599 de 2025.</p>
+     <p class="fuente">Fuente: <a href="https://www.pv-magazine-latam.com/2026/05/25/paraguay-presenta-una-licitacion-internacional-para-una-central-solar-de-140-mw-bajo-el-nuevo-regimen-renovable/" target="_blank" rel="noopener">pv magazine Latinoamérica, 25 de mayo de 2026</a></p>
+     <dl class="vocab">
+      <div><dt>Operador del sistema</dt><dd>ANDE</dd></div>
+      <div><dt>Autoridad del sector</dt><dd>Viceministerio de Minas y Energía</dd></div>
+     </dl>
+    </article>
+
+    <article class="ficha" id="pais-ec" data-pais="ec">
+     <h3><span class="iso2" aria-hidden="true">EC</span>Ecuador</h3>
+     <p class="dato-de">Dato del mercado</p>
+     <p class="dato"><strong>82&nbsp;MWp</strong> tiene Faro de San Marco, la planta solar privada que entró en operación comercial en noviembre de 2026, en Santa Elena.</p>
+     <p class="fuente">Fuente: <a href="https://www.ambienteyenergia.gob.ec/el-mayor-parque-solar-del-ecuador-inicia-operaciones-en-santa-elena-con-el-impulso-del-gobierno-de-daniel-noboa/" target="_blank" rel="noopener">Ministerio de Ambiente y Energía, 5 de noviembre de 2026</a></p>
+     <dl class="vocab">
+      <div><dt>Operador del sistema</dt><dd>CENACE</dd></div>
+      <div><dt>Regulador</dt><dd>ARCONEL</dd></div>
+     </dl>
+    </article>
+
+    <article class="ficha" id="pais-bo" data-pais="bo">
+     <h3><span class="iso2" aria-hidden="true">BO</span>Bolivia</h3>
+     <p class="dato-de">Dato del mercado</p>
+     <p class="dato"><strong>40&nbsp;MW</strong> en corriente alterna, como mínimo, tendrá la planta solar Contorno Bajo I, en Viacha (La Paz). ENDE abrió su licitación internacional en noviembre de 2026.</p>
+     <p class="fuente">Fuentes: <a href="https://www.pv-magazine-latam.com/2026/11/17/la-estatal-boliviana-ende-licita-la-construccion-de-la-planta-solar-contorno-bajo-i-de-40-mw/" target="_blank" rel="noopener">pv magazine Latinoamérica, 17 de noviembre de 2026</a> y <a href="https://www.ende.bo/nacional-internacional/vigentes" target="_blank" rel="noopener">ENDE, licitación ENDE-KFW-2026-002</a></p>
+     <dl class="vocab">
+      <div><dt>Operador del sistema</dt><dd>Comité Nacional de Despacho de Carga (CNDC)</dd></div>
+      <div><dt>Regulador</dt><dd>AETN</dd></div>
+     </dl>
+    </article>
+
+    <article class="ficha" id="pais-sv" data-pais="sv">
+     <h3><span class="iso2" aria-hidden="true">SV</span>El Salvador</h3>
+     <p class="dato-de">Dato del mercado</p>
+     <p class="dato"><strong>847&nbsp;MW</strong> solares fotovoltaicos al cierre de 2025: cerca del 26&nbsp;% de la capacidad instalada y la primera tecnología del país.</p>
+     <p class="fuente">Fuente: <a href="https://www.pv-magazine-latam.com/2026/07/01/la-fotovoltaica-en-el-salvador-alcanza-84662-mw-y-pasa-a-liderar-la-capacidad-instalada-de-generacion-electrica/" target="_blank" rel="noopener">pv magazine Latinoamérica, con datos de SIGET, 1 de julio de 2026</a></p>
+     <dl class="vocab">
+      <div><dt>Operador del sistema</dt><dd>Unidad de Transacciones (UT)</dd></div>
+      <div><dt>Regulador</dt><dd>SIGET</dd></div>
+     </dl>
+    </article>
+
+    <article class="ficha" id="pais-cr" data-pais="cr">
+     <h3><span class="iso2" aria-hidden="true">CR</span>Costa Rica</h3>
+     <p class="dato-de">Dato del mercado</p>
+     <p class="dato"><strong class="frase">50 de 86&nbsp;MW</strong> solares privados adjudicados por el ICE en 2024 ya operaban en noviembre de 2026.</p>
+     <p class="fuente">Fuente: <a href="https://www.pv-magazine-latam.com/2026/11/20/costa-rica-incorpora-50-mw-solares-de-un-bloque-de-86-mw-adjudicado-por-el-ice/" target="_blank" rel="noopener">pv magazine Latinoamérica, 20 de noviembre de 2026</a></p>
+     <dl class="vocab">
+      <div><dt>Operador del sistema</dt><dd>ICE</dd></div>
+      <div><dt>Regulador</dt><dd>ARESEP</dd></div>
+     </dl>
+    </article>
+
+    <article class="ficha" id="pais-pr" data-pais="pr">
+     <h3><span class="iso2" aria-hidden="true">PR</span>Puerto Rico</h3>
+     <p class="dato-de">Dato del mercado</p>
+     <p class="dato"><strong>220&nbsp;MW</strong> de baterías en Arecibo y Santa Isabel: en agosto de 2026 el Departamento de Energía de Estados Unidos cerró el préstamo que las financia.</p>
+     <p class="fuente">Fuente: <a href="https://www.energy.gov/edf/articles/does-office-energy-dominance-financing-closes-loan-strengthen-puerto-ricos-grid" target="_blank" rel="noopener">U.S. Department of Energy, 5 de agosto de 2026</a></p>
+     <dl class="vocab">
+      <div><dt>Regulador</dt><dd>Negociado de Energía de Puerto Rico</dd></div>
+     </dl>
+    </article>
+
+    <article class="ficha" id="pais-hn" data-pais="hn">
+     <h3><span class="iso2" aria-hidden="true">HN</span>Honduras</h3>
+     <p class="dato">Aún no publicamos un dato verificado de Honduras. Su marco regulatorio se revisa en la primera conversación.</p>
+     <dl class="vocab">
+      <div><dt>Quien contrata su energía libremente</dt><dd>Consumidor calificado</dd></div>
+      <div><dt>Operador del sistema</dt><dd>Centro Nacional de Despacho (ENEE)</dd></div>
+      <div><dt>Regulador</dt><dd>CREE</dd></div>
+     </dl>
+    </article>
+
+    <article class="ficha" id="pais-ni" data-pais="ni">
+     <h3><span class="iso2" aria-hidden="true">NI</span>Nicaragua</h3>
+     <p class="dato">Aún no publicamos un dato verificado de Nicaragua. Su marco regulatorio se revisa en la primera conversación.</p>
+    </article>
+
+    <article class="ficha" id="pais-ve" data-pais="ve">
+     <h3><span class="iso2" aria-hidden="true">VE</span>Venezuela</h3>
+     <p class="dato">Aún no publicamos un dato verificado de Venezuela. Su marco regulatorio se revisa en la primera conversación.</p>
+    </article>
+
+    <nav class="otros" aria-label="Otros mercados">
+     <p class="otros-t">Otros mercados</p>
+     <a class="pais" href="#pais-ar" data-pais="ar">Argentina</a>
+     <a class="pais" href="#pais-br" data-pais="br">Brasil</a>
+     <a class="pais" href="#pais-co" data-pais="co">Colombia</a>
+     <a class="pais" href="#pais-mx" data-pais="mx">México</a>
+    </nav>
+
+   </div>
+  </div>
+  <p class="latam-pie">Última revisión: 25 de noviembre de 2026. La regulación cambia: confirmamos su aplicación en cada proyecto. Los enlaces de las fuentes se abren en otra pestaña. ¿Tu país no está? <a href="#contacto">Cuéntanos el caso</a>.</p>
+ </div>
+</section>
+
+<!-- ================= 08 PERFILES ================= -->
+<section class="seccion" id="perfiles" aria-labelledby="t-perfiles">
+ <div class="reticula cabecera">
+  <p class="num" aria-hidden="true">08</p>
+  <p class="etiqueta">Para quién</p>
+  <h2 class="tit" id="t-perfiles">Quién puede traernos su proyecto</h2>
+ </div>
+ <div class="reticula">
+  <ul class="perfiles">
+   <li><h3>Industria y comercio</h3><p>¿Me sirve una batería para mis picos de demanda o mi respaldo? ¿De qué tamaño?</p><a class="enlace" href="#estimador">Estima el tamaño <span aria-hidden="true">→</span></a></li>
+   <li><h3>Desarrolladores y generadoras</h3><p>¿Cómo sumo almacenamiento a mi parque? ¿Qué me va a pedir la conexión?</p><a class="enlace" href="#metodo">Ver el método <span aria-hidden="true">→</span></a></li>
+   <li><h3>Distribuidoras, cooperativas y empresas públicas</h3><p>¿Cómo especifico y licito un sistema de baterías?</p><a class="enlace" href="#proyectos">Ver los tipos de encargo <span aria-hidden="true">→</span></a></li>
+   <li><h3>Contratistas e instaladores</h3><p>Necesito ingeniería y estudios para mi oferta o mi obra.</p><a class="enlace" href="#entregables">Ver entregables de ejemplo <span aria-hidden="true">→</span></a></li>
+   <li><h3>Inversionistas</h3><p>Necesito una revisión técnica antes de decidir.</p><a class="enlace" href="#contacto">Cuéntanos tu proyecto <span aria-hidden="true">→</span></a></li>
+  </ul>
+ </div>
+</section>
+
+<!-- ================= CHILE ================= -->
+<aside class="chile" aria-labelledby="t-chile">
+ <div class="reticula">
+  <p class="etiqueta">Sólo para Chile</p>
+  <h2 id="t-chile">¿Eres cliente libre en Chile y tu contrato eléctrico vence pronto?</h2>
+  <p>El Diagnóstico de renovación revisa tu contrato, tus facturas y cómo se te cobra la potencia, y te dice qué conviene negociar.</p>
+  <a class="enlace" href="/diagnostico-renovacion">Ver el diagnóstico <span aria-hidden="true">→</span></a>
+ </div>
+</aside>
+
+<!-- ================= 09 PREGUNTAS ================= -->
+<section class="seccion" id="preguntas" aria-labelledby="t-preguntas">
+ <div class="reticula cabecera">
+  <p class="num" aria-hidden="true">09</p>
+  <p class="etiqueta">Preguntas</p>
+  <h2 class="tit" id="t-preguntas">Preguntas frecuentes</h2>
+ </div>
+ <div class="reticula">
+  <div class="faq">
+   <details>
+    <summary>¿Quiénes están detrás de Solution&nbsp;&amp;&nbsp;BESS?</summary>
+    <p>Somos una firma nueva de ingeniería en energía y almacenamiento, con base en Chile. Por eso publicamos el método, ejemplos de entregables y los supuestos de cálculo: para que puedas evaluar cómo trabajamos antes de contratar. Estamos constituyendo la sociedad y publicaremos aquí su razón social.</p>
+   </details>
+   <details>
+    <summary>¿Cuánto cuesta la ingeniería?</summary>
+    <p>Depende del alcance. Después de la conversación inicial recibes una propuesta por etapa, con precio, entregables y plazos. La conversación y la propuesta no te comprometen a contratar.</p>
+   </details>
+   <details>
+    <summary>¿Cuánto cuesta un sistema de baterías y cuánto voy a ahorrar?</summary>
+    <p>No damos cifras sin ver los datos de tu proyecto. El costo depende de la potencia, las horas de almacenamiento, el fabricante, las obras de conexión, la logística y los impuestos de cada país. El beneficio depende de tu tarifa o tu contrato y de tu perfil de consumo. Eso es justamente lo que responde la prefactibilidad.</p>
+   </details>
+   <details>
+    <summary>¿Qué hacen con mis documentos?</summary>
+    <p>Los usamos sólo para tu proyecto. No los entregamos a fabricantes, suministradores ni otros terceros sin tu autorización; sólo los alojan los proveedores de servicios que describe la <a href="/privacidad">política de privacidad</a>. Si lo prefieres, firmamos un acuerdo de confidencialidad antes de recibirlos.</p>
+   </details>
+   <details>
+    <summary>¿En qué países trabajan?</summary>
+    <p>Tenemos base en Chile y atendemos proyectos de toda Latinoamérica. Trabajamos en remoto y viajamos cuando el proyecto lo pide. En cada encargo empezamos por la norma técnica del país y los requisitos de su operador.</p>
+   </details>
+   <details>
+    <summary>¿Quién firma los estudios que exige mi país?</summary>
+    <p>Depende del país y del trámite: algunos estudios deben llevar la firma de un profesional habilitado localmente. Lo revisamos en la primera conversación y la propuesta lo deja por escrito.</p>
+   </details>
+   <details>
+    <summary>¿Trabajan con una sola marca de baterías?</summary>
+    <p>No. Trabajamos con equipos de varios fabricantes, entre ellos HiTHIUM, Jinko ESS, CORNEX, Kehua y SOFAR, y los elegimos según los requisitos de cada proyecto. Si tu proyecto exige otro fabricante o una licitación abierta, la especificación se escribe por requisitos y comparamos todas las ofertas con la misma matriz.</p>
+   </details>
+   <details>
+    <summary>¿Qué información necesito para que evalúen mi proyecto?</summary>
+    <p>Para una empresa: consumos, facturas o recibos de los últimos 12 meses (mejor si hay perfil horario o cada 15 minutos), la tarifa o el contrato vigente, la potencia conectada y el objetivo del proyecto. Para un parque: ubicación, potencia prevista, punto de conexión y etapa de desarrollo. Si te falta algo, empezamos con lo que tengas.</p>
+   </details>
+   <details>
+    <summary>¿Qué estudios eléctricos se necesitan para conectar un proyecto?</summary>
+    <p>Los habituales son flujo de carga, cortocircuito, coordinación de protecciones y, según el caso, estabilidad y calidad de energía. El nombre del trámite y el organismo cambian en cada país.</p>
+   </details>
+   <details>
+    <summary>¿Se pueden agregar baterías a un parque solar que ya opera?</summary>
+    <p>Técnicamente sí. Depende de la regulación del país y de las condiciones de conexión del parque: puede exigir nuevos estudios y cambiar su régimen comercial. Conviene revisar el caso antes de invertir.</p>
+   </details>
+   <details>
+    <summary>¿Qué etapas de ingeniería tiene un proyecto?</summary>
+    <p>Prefactibilidad y dimensionamiento; ingeniería conceptual y básica; estudios y conexión; especificación y compra; y detalle, obra y puesta en marcha. Puedes contratar una etapa o varias; cada una se cotiza por separado. <a href="#metodo">Ver el método</a>.</p>
+   </details>
+   <details>
+    <summary>¿Qué es un BESS?</summary>
+    <p>Un BESS (sistema de almacenamiento de energía con baterías) guarda electricidad para entregarla después. Lo forman las celdas y sus módulos, el sistema que las gestiona (BMS), el conversor que une la corriente continua con la alterna (PCS), el sistema de gestión de energía (EMS), la transformación, las protecciones y la climatización.</p>
+   </details>
+   <details>
+    <summary>¿Qué diferencia hay entre la potencia (MW) y la energía (MWh) de una batería?</summary>
+    <p>La potencia (MW) dice cuánto puede entregar en un instante. La energía (MWh) dice cuánto puede entregar en total: dividida por la potencia, da la duración. Un sistema de 10&nbsp;MW y 40&nbsp;MWh útiles entrega 10&nbsp;MW durante 4 horas. La energía instalada es algo mayor que la útil. El tamaño se define a partir del uso y del perfil de carga, no del catálogo.</p>
+   </details>
+  </div>
+ </div>
+</section>
+
+<!-- ================= 10 CONTACTO ================= -->
+<section class="seccion fondo-azul contacto" id="contacto" aria-labelledby="t-contacto">
+ <div class="reticula cabecera">
+  <p class="num" aria-hidden="true">10</p>
+  <p class="etiqueta">Contacto</p>
+  <h2 class="tit" id="t-contacto">Cuéntanos tu proyecto</h2>
+  <p class="entrada">Con pocos datos alcanza para empezar. Si aún no los tienes, cuéntanos la idea.</p>
+ </div>
+ <div class="reticula">
+  <div class="despues">
+   <h3>Qué pasa después</h3>
+   <ol>
+    <li>Te respondemos por correo.</li>
+    <li>Coordinamos una conversación de 30 minutos.</li>
+    <li>Te enviamos una propuesta con alcance, entregables, plazos y precio.</li>
+   </ol>
+   <p class="alt">¿Prefieres no usar el formulario? Escríbenos a <!--email_off--><a href="mailto:contacto@solutionandbess.com?subject=Proyecto%20de%20ingenier%C3%ADa">contacto@solutionandbess.com</a><!--/email_off-->.</p>
+   <div class="quienes">
+    <h3>Quiénes somos</h3>
+    <p>Somos una firma nueva de ingeniería en energía y almacenamiento, con base en Chile. Por eso publicamos el método, ejemplos de entregables y los supuestos de cálculo: para que puedas evaluar cómo trabajamos antes de contratar. Estamos constituyendo la sociedad y publicaremos aquí su razón social.</p>
+   </div>
+  </div>
+
+  <div class="formulario-caja">
+   <form class="formulario" id="form-proyecto" method="post" novalidate data-origen="web-latam">
+    <div class="campos">
+     <div class="campo"><label for="f-nombre">Nombre</label><input id="f-nombre" name="nombre" type="text" autocomplete="name" maxlength="120" required></div>
+     <div class="campo"><label for="f-empresa">Empresa u organización</label><input id="f-empresa" name="empresa" type="text" autocomplete="organization" maxlength="160" required></div>
+     <div class="campo"><label for="f-cargo">Cargo <span class="opc">(opcional)</span></label><input id="f-cargo" name="cargo" type="text" autocomplete="organization-title" maxlength="120"></div>
+     <div class="campo"><label for="f-correo">Correo</label><input id="f-correo" name="correo" type="email" autocomplete="email" maxlength="200" required></div>
+     <div class="campo"><label for="f-telefono">Teléfono o WhatsApp <span class="opc">(opcional)</span></label><input id="f-telefono" name="telefono" type="tel" autocomplete="tel" maxlength="40" aria-describedby="pista-telefono"><p class="pista" id="pista-telefono">Con código de país.</p></div>
+     <div class="campo"><label for="f-pais">País del proyecto</label>
+      <select id="f-pais" name="pais" autocomplete="country-name" required>
+       <option value="" selected disabled>Elige un país</option>
+       <option>Argentina</option><option>Bolivia</option><option>Brasil</option><option>Chile</option><option>Colombia</option><option>Costa Rica</option><option>Ecuador</option><option>El Salvador</option><option>Guatemala</option><option>Honduras</option><option>México</option><option>Nicaragua</option><option>Panamá</option><option>Paraguay</option><option>Perú</option><option>Puerto Rico</option><option>República Dominicana</option><option>Uruguay</option><option>Venezuela</option><option>Otro país</option>
+      </select>
+     </div>
+     <div class="campo"><label for="f-tipo">Tipo de proyecto</label>
+      <select id="f-tipo" name="tipo" required>
+       <option value="" selected disabled>Elige una opción</option>
+       <option>Almacenamiento con baterías (BESS)</option>
+       <option>Parque solar o planta fotovoltaica</option>
+       <option>Híbrido solar + baterías o microrred</option>
+       <option>Estudio eléctrico o de conexión</option>
+       <option>Especificación o compra de equipos</option>
+       <option>Evaluación técnico-económica o prefactibilidad</option>
+       <option>Revisión técnica de un proyecto o de una oferta</option>
+       <option>Contrato eléctrico de cliente libre (Chile)</option>
+       <option>Otro</option>
+      </select>
+     </div>
+     <div class="campo"><label for="f-etapa">Etapa <span class="opc">(opcional)</span></label>
+      <select id="f-etapa" name="etapa">
+       <option value="" selected>Sin indicar</option>
+       <option>Idea o evaluación inicial</option>
+       <option>Prefactibilidad</option>
+       <option>Ingeniería</option>
+       <option>Licitación o compra de equipos</option>
+       <option>Construcción o puesta en marcha</option>
+       <option>En operación</option>
+      </select>
+     </div>
+     <div class="campo"><label for="f-escala">Potencia aproximada <span class="opc">(opcional)</span></label>
+      <select id="f-escala" name="escala">
+       <option value="" selected>Sin indicar</option>
+       <option value="Menos de 1 MW">Menos de 1 MW (1000 kW)</option>
+       <option>De 1 a 10 MW</option>
+       <option>De 10 a 100 MW</option>
+       <option>Más de 100 MW</option>
+       <option>Aún no lo sé</option>
+      </select>
+     </div>
+     <div class="campo ancho2"><label for="f-mensaje">Cuéntanos más <span class="opc">(opcional)</span></label><textarea id="f-mensaje" name="mensaje" rows="4" maxlength="1800"></textarea></div>
+     <div class="trampa" aria-hidden="true"><label for="zx_control">Deja este campo vacío</label><input id="zx_control" name="zx_control" type="text" tabindex="-1" autocomplete="off" data-1p-ignore data-lpignore="true" data-form-type="other"></div>
+    </div>
+    <div class="campo acepto"><label><input type="checkbox" name="acepta_privacidad" required><span>Acepto que usen estos datos para responder mi consulta, según la <a href="/privacidad">política de privacidad</a>.</span></label></div>
+    <button class="boton" type="submit" disabled>Enviar mi proyecto <span class="fl" aria-hidden="true">→</span></button>
+    <p class="estado" id="estado-proyecto" role="status" aria-live="polite"></p>
+    <p class="estado" data-sin-script>Si el botón no se activa, escríbenos a <!--email_off--><a href="mailto:contacto@solutionandbess.com?subject=Proyecto%20de%20ingenier%C3%ADa">contacto@solutionandbess.com</a><!--/email_off-->.</p>
+   </form>
+   <div class="gracias" id="gracias-proyecto" hidden tabindex="-1">
+    <h3>Recibimos tu proyecto.</h3>
+    <p>Te escribiremos a <strong data-gracias="correo"></strong> desde <!--email_off-->contacto@solutionandbess.com<!--/email_off-->.</p>
+    <p>Para avanzar más rápido, ten a mano tus consumos, facturas o recibos de los últimos 12 meses, la ubicación y el punto de conexión, y el objetivo del proyecto.</p>
+   </div>
+  </div>
  </div>
 </section>
 
 </main>
 
 <footer class="pie">
- <div class="ancho fila">
-  <div class="marca">
-   <span class="iso"><!--iso-oscuro--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 140" aria-hidden="true" aria-label="Solution &amp; BESS">
-<defs><style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&amp;display=swap');</style>
-<linearGradient id="borde-sb-oscuro" x1="0" y1="0" x2="190" y2="0" gradientUnits="userSpaceOnUse">
-<stop offset="0.5" stop-color="#FFFFFF"/><stop offset="0.5" stop-color="#3A9BAA"/></linearGradient></defs>
-<rect x="8" y="28" width="162" height="84" rx="16" fill="none" stroke="url(#borde-sb-oscuro)" stroke-width="9"/>
+ <div class="reticula">
+  <div class="pie-marca">
+   <span class="iso"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 140" aria-hidden="true" focusable="false">
+<defs><linearGradient id="borde-sb-pie" x1="0" y1="0" x2="190" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0.5" stop-color="#FFFFFF"/><stop offset="0.5" stop-color="#3A9BAA"/></linearGradient></defs>
+<rect x="8" y="28" width="162" height="84" rx="16" fill="none" stroke="url(#borde-sb-pie)" stroke-width="9"/>
 <rect x="174" y="52" width="11" height="36" rx="4" fill="#3A9BAA"/>
 <text x="40" y="93" text-anchor="middle" font-family="Montserrat, 'Segoe UI', Arial, sans-serif" font-weight="800" font-size="64" fill="#FFFFFF">S</text>
 <text x="139" y="93" text-anchor="middle" font-family="Montserrat, 'Segoe UI', Arial, sans-serif" font-weight="800" font-size="64" fill="#3A9BAA">B</text>
 <path d="M103 2 L67 78 L88 78 L73 138 L113 56 L91 56 Z" fill="#D39B22" stroke="#07121B" stroke-width="8" stroke-linejoin="round" paint-order="stroke"/>
-</svg><!--/iso--></span>
-   <span class="ln">SOLUTION <i>&amp;</i> <b>BESS</b></span>
+</svg></span>
+   <p class="ln">SOLUTION <i>&amp;</i> <b>BESS</b></p>
+   <p>Ingeniería en energía y almacenamiento. Empresa en formación, con base en Chile.</p>
   </div>
-  <p>Ingeniería en energía y almacenamiento · Chile · <!--email_off-->contacto@solutionandbess.com<!--/email_off--></p>
-  <a href="/privacidad">Política de privacidad</a>
+  <nav class="pie-enlaces" aria-label="Enlaces del pie">
+   <a href="#proyectos">Proyectos</a>
+   <a href="#metodo">Método</a>
+   <a href="#latinoamerica">Latinoamérica</a>
+   <a href="/diagnostico-renovacion">Diagnóstico de renovación (Chile)</a>
+   <a href="/privacidad">Política de privacidad</a>
+  </nav>
+  <div class="pie-contacto">
+   <p><!--email_off--><a href="mailto:contacto@solutionandbess.com">contacto@solutionandbess.com</a><!--/email_off--></p>
+   <p><a href="https://www.instagram.com/solutionandbess/" target="_blank" rel="noopener">Instagram @solutionandbess</a></p>
+  </div>
+  <p class="pie-nota">Imágenes de referencia con licencia de uso comercial. Ilustraciones propias. © 2026 Solution &amp; BESS.</p>
  </div>
 </footer>
 
-<script src="formulario.js" defer></script>
 </body>
 </html>

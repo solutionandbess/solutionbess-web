@@ -39,7 +39,7 @@
 
   function valido(nombre) {
     const el = campo(nombre);
-    if (!el) return true;
+    if (!el) return false;
     if (el.type === "checkbox") return el.checked;
     const v = limpio(el.value);
     if (nombre === "correo") return ES_CORREO.test(v) && v.length <= 200;
@@ -84,19 +84,27 @@
     }
   }
 
-  // Otros módulos de la página (por ejemplo, el predimensionador) pueden dejar datos listos en el formulario:
-  //   document.dispatchEvent(new CustomEvent("sb:prefill", { detail: { mensaje: "…", tipo: "…" } }))
-  document.addEventListener("sb:prefill", (ev) => {
-    const d = ev.detail || {};
-    if (d.tipo && campo("tipo")) {
-      const op = [...campo("tipo").options].find((o) => o.value === d.tipo);
-      if (op) { campo("tipo").value = d.tipo; marcar("tipo", null); }
+  const datos = new URLSearchParams(location.hash.slice(1));
+  const estimacion = datos.get("estimacion");
+  if (estimacion !== null) {
+    history.replaceState(history.state, "", "#f-nombre");
+    const tipo = campo("tipo");
+    const mensaje = campo("mensaje");
+    const valorTipo = datos.get("tipo");
+    if (estimacion.startsWith("Estimación preliminar (calculada en la web):") && estimacion.length <= 500 &&
+        tipo && mensaje && [...tipo.options].some((opcion) => opcion.value === valorTipo)) {
+      if (!tipo.value) tipo.value = valorTipo;
+      const actual = limpio(mensaje.value);
+      const texto = actual ? actual + "\n\n" + estimacion : estimacion;
+      if (texto.length <= mensaje.maxLength) {
+        mensaje.value = texto;
+        decir("", "Agregamos tu estimación al mensaje. Completa tus datos para enviarla.");
+      } else {
+        decir("error", "Tu mensaje no tiene espacio para agregar la estimación. Acórtalo antes de volver a intentarlo.");
+      }
     }
-    if (d.mensaje && campo("mensaje")) {
-      const actual = limpio(campo("mensaje").value);
-      campo("mensaje").value = (actual ? actual + "\n\n" : "") + d.mensaje;
-    }
-  });
+    campo("nombre")?.focus();
+  }
 
   form.addEventListener("submit", async (ev) => {
     ev.preventDefault();
@@ -104,8 +112,10 @@
 
     // Trampa para robots: una persona no ve este campo. Si llega con algo no se guarda,
     // pero se muestra el correo por si fue un autocompletado del navegador.
-    if (limpio(campo("zx_control") && campo("zx_control").value)) {
-      decir("ok", "Gracias. Si no recibes nuestra respuesta, escríbenos a", true);
+    const trampa = campo("zx_control");
+    if (limpio(trampa?.value)) {
+      trampa.value = "";
+      decir("error", "No se envió el formulario. Tus datos siguen aquí. Vuelve a intentarlo o escríbenos a", true);
       return;
     }
 
@@ -113,11 +123,15 @@
     Object.entries(OBLIGATORIOS).forEach(([n, mensaje]) => {
       const ok = valido(n);
       marcar(n, ok ? null : mensaje);
-      if (!ok && !primero) primero = campo(n);
+      if (!ok && primero === null) primero = campo(n) ?? false;
     });
-    if (primero) {
-      decir("error", "Revisa los campos marcados.");
-      primero.focus();
+    if (primero !== null) {
+      if (primero) {
+        decir("error", "Revisa los campos marcados.");
+        primero.focus();
+      } else {
+        decir("error", "El formulario no está disponible. Escríbenos a", true);
+      }
       return;
     }
 
@@ -126,7 +140,14 @@
       ["País", valor("pais")], ["Proyecto", valor("tipo")], ["Etapa", valor("etapa")], ["Escala", valor("escala")],
     ].filter(([, v]) => v).map(([k, v]) => k + ": " + v).join(" · ");
     const texto = valor("mensaje");
-    const mensaje = (ficha + (texto ? "\n\n" + texto : "")).slice(0, 2000);
+    const mensaje = ficha + (texto ? "\n\n" + texto : "");
+    if (mensaje.length > 2000) {
+      marcar("mensaje", "Acorta tu mensaje para que quepa junto con los datos del proyecto.");
+      decir("error", "Revisa el mensaje antes de enviar.");
+      campo("mensaje").focus();
+      return;
+    }
+    marcar("mensaje", null);
 
     const fila = {
       nombre: valor("nombre").slice(0, 120),
@@ -139,6 +160,8 @@
       origen: (form.dataset.origen || "web-latam").slice(0, 60),
     };
 
+    const editables = [...form.querySelectorAll("input:enabled, select:enabled, textarea:enabled")];
+    editables.forEach((el) => { el.disabled = true; });
     boton.disabled = true;
     decir("", "Enviando…");
     const corte = new AbortController();
@@ -164,6 +187,7 @@
       decir("error", "No pudimos enviar tu mensaje. Tus datos siguen en el formulario: inténtalo de nuevo o escríbenos a", true);
     } finally {
       clearTimeout(reloj);
+      editables.forEach((el) => { el.disabled = false; });
       boton.disabled = false;
     }
   });

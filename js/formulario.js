@@ -34,7 +34,7 @@
 
   function valido(nombre) {
     const el = campo(nombre);
-    if (!el) return true;
+    if (!el) return false;
     if (el.type === "checkbox") return el.checked;
     const v = limpio(el.value);
     if (nombre === "correo") return ES_CORREO.test(v) && v.length <= 200;
@@ -86,8 +86,10 @@
 
     // Trampa para robots: una persona no ve este campo. Si llega con algo no se guarda,
     // pero se muestra el correo por si fue un autocompletado del navegador.
-    if (limpio(campo("zx_control") && campo("zx_control").value)) {
-      decir("ok", "Gracias. Si no recibes nuestra respuesta, escríbenos a", true);
+    const trampa = campo("zx_control");
+    if (limpio(trampa?.value)) {
+      trampa.value = "";
+      decir("error", "No se envió el formulario. Tus datos siguen aquí. Vuelve a intentarlo o escríbenos a", true);
       return;
     }
 
@@ -95,11 +97,15 @@
     Object.entries(OBLIGATORIOS).forEach(([n, mensaje]) => {
       const ok = valido(n);
       marcar(n, ok ? null : mensaje);
-      if (!ok && !primero) primero = campo(n);
+      if (!ok && primero === null) primero = campo(n) ?? false;
     });
-    if (primero) {
-      decir("error", "Revisa los campos marcados.");
-      primero.focus();
+    if (primero !== null) {
+      if (primero) {
+        decir("error", "Revisa los campos marcados.");
+        primero.focus();
+      } else {
+        decir("error", "El formulario no está disponible. Escríbenos a", true);
+      }
       return;
     }
 
@@ -116,6 +122,8 @@
       origen: "web",
     };
 
+    const editables = [...form.querySelectorAll("input:enabled, select:enabled, textarea:enabled")];
+    editables.forEach((el) => { el.disabled = true; });
     boton.disabled = true;
     decir("", "Enviando…");
     const corte = new AbortController();
@@ -134,6 +142,7 @@
       decir("error", "No pudimos enviar tu solicitud. Tus datos siguen en el formulario: inténtalo de nuevo o escríbenos a", true);
     } finally {
       clearTimeout(reloj);
+      editables.forEach((el) => { el.disabled = false; });
       boton.disabled = false;
     }
   });

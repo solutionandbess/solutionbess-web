@@ -174,22 +174,9 @@
     const texto = MARCA + " uso principal: " + ultimo.uso.nombre + " · potencia a cubrir: " + fPotencia(ultimo.kW) +
       " · duración: " + fHoras(ultimo.h) + " · energía útil: " + fEnergia(ultimo.util) +
       " · energía instalada sugerida: " + fRango(ultimo.baja, ultimo.alta) + ".";
-    const destino = document.querySelector('#form-proyecto [name="mensaje"]');
-    if (destino) {
-      // Si ya había una estimación anterior en el mensaje, se reemplaza en vez de acumular.
-      destino.value = destino.value.split(/\n{2,}/).filter((p) => !p.trim().startsWith(MARCA)).join("\n\n").trim();
-    }
-    document.dispatchEvent(new CustomEvent("sb:prefill", { detail: { mensaje: texto, tipo: ultimo.uso.tipo } }));
-    const form = document.getElementById("form-proyecto");
-    const seccion = document.getElementById("contacto") || form;
-    if (seccion) {
-      const calma = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      seccion.scrollIntoView({ behavior: calma ? "auto" : "smooth", block: "start" });
-    }
-    const nota = document.getElementById("estado-proyecto");
-    if (nota && form && !form.hidden) { nota.className = "estado"; nota.textContent = "Agregamos tu estimación al mensaje. Completa tus datos para enviarla."; }
-    const primero = form && form.elements.nombre;
-    if (primero) primero.focus({ preventScroll: true });
+    // El fragmento llega sólo al navegador y se retira al abrir el formulario.
+    const datos = new URLSearchParams({ estimacion: texto, tipo: ultimo.uso.tipo });
+    location.assign("/#" + datos);
   });
 
   raiz.classList.add("predim-activo");

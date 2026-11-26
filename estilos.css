@@ -195,6 +195,35 @@ b, strong { font-weight: 600; }
 }
 
 /* ---------- portada ---------- */
+.portada.portada-breve { min-height: 0; }
+.portada-breve .portada-cuerpo { padding-top: clamp(125px, 18vh, 190px); }
+.portada-breve .portada-texto { grid-column: 1 / -1; max-width: 54rem; }
+.portada-breve .titular { font-size: clamp(2.55rem, 6.1vw, 5.5rem); }
+.portada-breve .portada-pie { padding-top: 30px; }
+.seccion.seccion-breve { padding-block: clamp(42px, 7vw, 90px); }
+.seccion-breve .reticula { row-gap: 22px; }
+.seccion-breve .tit { margin: 0; }
+.necesidades {
+  display: grid; gap: 20px; padding: 0; margin: 0; list-style: none;
+}
+.necesidades li { padding: 20px 0 0; border-top: 2px solid var(--verde); }
+.necesidades h3 { color: var(--azul); margin-top: 0; }
+.necesidades p { margin-bottom: 0; }
+.metodo-breve { align-items: start; }
+.metodo-breve .entrada { margin-top: 12px; }
+.matriz-breve summary { min-height: 44px; font-weight: 600; cursor: pointer; }
+.matriz-breve[open] summary { margin-bottom: 16px; }
+.chile-breve { background: #F8F6F1; }
+.contacto-breve .reticula > .formulario-caja { grid-column: 1 / -1; max-width: 54rem; }
+.contacto-breve .reticula > p:last-child a { color: inherit; overflow-wrap: anywhere; }
+.guia-enlaces { display: flex; flex-wrap: wrap; gap: 14px 26px; }
+.rotulo-diagrama { font: 500 27px 'IBM Plex Sans', sans-serif; fill: #5B6B78; }
+@media (min-width: 760px) {
+  .necesidades { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 40px; }
+  .metodo-breve > div { grid-column: 1 / 6; }
+  .metodo-breve > .matriz-breve { grid-column: 7 / -1; }
+}
+
 .portada {
   position: relative; isolation: isolate; overflow: clip;
   display: flex; flex-direction: column;
